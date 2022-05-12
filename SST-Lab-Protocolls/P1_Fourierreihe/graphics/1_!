@@ -1,0 +1,26 @@
+library(ggplot2)
+
+
+outputName <- "1_1_AS.pdf"
+
+T   <- 0.001
+tau <- 0.5
+a0  <- 0
+A   <- 1
+
+
+
+amplifun <- function (n) {
+
+  4 * A / (n * pi) * sin(n * pi / 2)
+         
+}
+
+hsBlue <- "#00b1db"
+
+plot <- gpplot( aes(x=x) ) +
+     theme_minimal() 
+
+
+
+plot

@@ -1,0 +1,107 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % \includepdf{./titlepage/titlepage1.pdf}
+  % \clearpage
+  % \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \section{Aufgabe 1} 
+ \subsection{RZ-Bandbreite}
+ Bei der Return-to-Zero (RZ) Übertragung entspricht die Bitrate der Bandbreite
+ \[B_{RZ} = BR = 2\, \si{\mega\hertz}\]
+
+ Die RZ-Übertragung besitzt gegenüber der der NRZ-Übertragung die doppelte
+ Bandbreite, da bei gleicher Zeit für ein Bit $\tau_b$, d.h. bei gleicher
+ Bitrate, eine Rechteckfolge mit halbierter Periodendauer/doppelter Frequenz
+entsteht.
+ \begin{figure}[H]
+ \begin{center}
+   \resizebox{0.382\textwidth}{!}{\input{rz.pdf_tex}}
+ \end{center}
+ \end{figure}
+
+
+ % Bei der NRZ-Übertragung ist die Näherung der Bandbreite gegeben durch die
+ % Breite des Spektrums bis zum ersten Nulldurchgang bei $1/{\tau_b}$. Die Bitrate
+ % ist $BR = 1/{\tau_b}$
+
+ \subsection{Bandwidth / Rise Time}
+ Der Zusammenhang zwischen Signalanstiegszeit (\emph{rise time}) und Bandbreite ist gegeben durch
+ \[B = \frac{0.35}{t_{\mathrm{rise}}} = \frac{0.35}{1 \, \si{\nano\second}} =
+   350 \, \si{\mega\hertz}\]
+
+
+\subsection{Netzwerkanalysator}
+Der Netzwerkanalysator hat einen nach außen geführten internen Wobbel-Generator,
+welcher als Eingangssignalquelle für das DUT verwendet wird. Der Ausgang des
+DUTs wird an den Eingang des NWAs geführt.
+
+Da dem NWA die momentane Testfrequenz und Testamplitude bekannt ist, kann er die
+Amplitude messen und damit die Dämpfung bzw. Verstärkung bei dieser Frequenz, die durch den Frequenzgang des DUTs entsteht, als Punkt in
+einem Graph darstellen.
+
+Die Auflösung hängt dabei vom Abstand der Durchlaufenen Frequenzen ab.
+
+\subsection{Impulsmessverfahren zur Bandbreitenbestimmung}
+Das Impulsmessverfahren verwendet einen Impulgenerator zur Erzeugung eines
+möglichst schmalen Impulses. Die Idee dahinter ist, einem \emph{Dirac-Impuls} so
+nahe wie möglich zu kommen, da dieser theoretisch alle Frequenzen gleichzeitig
+mit gleicher Amplitude enthält.
+
+Der Impuls wird auf das DUT gegeben. Da sich das Ausgangs-Zeitsignal als \emph{Faltung}
+des Eingangssignals mit der Impulsantwort (Gewichtsfunktion) des DUTs ergibt, entsteht im
+Frequenzbereich die \emph{Multiplikation} des Frequenzganges des DUTs mit dem
+über alle Frequenzen konstanten Frequenzgang des Testimpulses. Der Frequenzgang
+am Ausgang entspricht demnach dem Frequenzgang des DUTs (skaliert mit der
+Amplitude/Impulsdauer des Testimpulses). Über eine FFT kann das resultierende gemessene Zeitsignal am Oszilloskop oder am Computer in den Frequenzbereich
+transformiert werden.
+
+\subsection{(negative) Einflussgrößen beim Impulsmessverfahren}
+\includegraphics[width=\textwidth]{einflussdiag}
+
+\subsubsection{Quellimpuls}
+Ist der Quellimpuls zeitlich zu lang, ist seine obere Grenzfrequenz
+möglicherweise kleiner als die des DUTs. Dadurch würde der Quellimpuls den
+Frequenzgang des DUTs bei höheren Frequenzen negativ beeinflussen und somit die
+Messung verfälschen (Multiplikation beider Frequenzgänge im FB).
+
+Eine mögliche Lösung:
+\[H_{\mathrm{meas}}(f) = H_{\mathrm{impuls}}(f) \cdot H_{\textrm{DUT}}(f)\]
+\notebox{
+\[\rightarrow H_{\mathrm{DUT}}(f) = \frac{H_{\mathrm{meas}}(f)}{H_{\mathrm{impuls}}(f)}\]
+
+bzw. logarithmisch:
+\[H_{\textrm{DUT}_{dB}} = H_{\mathrm{impuls}_{dB}} - H_{\mathrm{meas}_{dB}}\]
+}
+
+Kennt man also die Impulsantwort kann man mit diesem Wissen den (\glqq richtigen\grqq) Frequenzgang des
+DUTs aus der Messung bestimmen.
+
+Oder halt Entfaltung (Dekonvolution).
+\href{https://de.wikipedia.org/wiki/Dekonvolution}{Wikipedia}
+
+\subsubsection{Messfenster}
+
+\subsubsection{DC-Offset}
+
+\subsubsection{Reflexionen}
+
+\subsubsection{Jitter}
+
+\subsubsection{Messeinrichtung}
+
+\subsection{Sampling-Oszilloskop}
+
+\subsubsection{Vorteile}
+\subsubsection{Nachteile}
+ 
+\end{document}

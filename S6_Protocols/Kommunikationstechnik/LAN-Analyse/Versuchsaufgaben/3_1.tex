@@ -1,0 +1,13 @@
+Nach Öffnen von Wireshark müssen die Capture-Optionen konfiguriert werden. Diese enthalten alle physischen und auch virtuellen Netzwerkschnittstellen. Es muss die Schnittstelle ausgewählt werden, deren Netzwerkverkehr der Analysator aufzeichnen soll. Zudem kann der \emph{Promiskuitive Modus} aktiviert werden, welcher dafür sorgt, dass auch Netzwerkverkehr aufgezeichnet wird, der nicht an die ausgewählte Schnittstelle gerichtet ist. Dies macht keinen Unterschied, wenn das Gerät an einen Switch angeschlossen ist, da dieser (i.d.R.) nur die wirkliche Zieladresse anspricht. In einem Funknetzwerk (WLAN) wäre der Mitschnitt des Verkehrs anderer mit dieser Einstellung jedoch möglich.\\
+
+\begin{figure}[H]
+  \begin{center}
+      \includegraphics[width=0.618\textwidth]{graphics/capture_options.png}
+      \caption{Auswahl der Netzwerkschnittstelle in den Capture-Optionen}
+  \end{center}
+\end{figure}
+
+Im Optionen-Reiter der Capture-Optionen kann außerdem eingestellt werden, ob die angezeigten Adressen (MAC, Netwerk/IP, Transport) in Namen aufgelöst werden sollen (sofern möglich).\\
+
+Nach der Aufzeichnung im Labor konnten die Daten als Trace-Dateien abgespeichert werden, um später analysiert zu werden. Zur Vereinfachung der Analyse kann man mithilfe von Filtern die Paketliste u.a. auf bestimmte Protokolle einschränken.
+Beispielsweise wird mit dem Filter \inlinecode{tcp.port == 80} nur der Verkehr mit den TCP-Portnummern 80 (HTTP) angezeigt.

@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Uppsala University Assignment Title Page
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+% Modified by Elsa Slattegard to fit Uppsala university
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{xcolor}
+
+\usepackage[ngerman]{babel}
+\usepackage{datetime}
+
+%\newdateformat{myformat}{}
+
+
+\definecolor{hsblue}{HTML}{0cb5df}
+\usepackage[a4paper,
+            left=1.5in,
+            right=1.5in,
+            top=0\paperheight,
+            bottom=0in]
+            {geometry}
+%\topmargin0cm
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+%\textsc{\LARGE Hochschule Wismar}\\[1.5cm] % Name of your university/college
+
+\noindent\begin{minipage}[t][0.3819660112501052\paperheight][t]{\textwidth}
+\centering
+\vspace{0.09016994374947421\paperheight}
+\includegraphics[scale=0.09016994374947421]{logo.jpg}
+\end{minipage}
+
+\begin{tabular}{C}
+
+
+
+\end{tabular}\\
+%\begin{minipage}[c]{.618\columnwidth}
+%\includegraphics[scale=0.14591]{logo.jpg}\\
+%end{minipage}\\
+%\vspace{0.14591\columnwidth}
+\textsc{\Large Grundlagen der Elektrotechnik II}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Course code}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\rule[0.618cm]{0.618\columnwidth}{1pt}\\
+{ \huge \bfseries Frequenzverhalten einfacher RLC-Netzwerke}\\ % Title of your document
+\vspace{0.034441853748633004\paperheight}
+\large Studien- und Versuchsaufgaben\\
+\vspace{0.1458980337503154\paperheight}
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+
+%\begin{flushleft} \large
+\emph{Autor:} Richard {\color{hsblue}\textsc{Grünert}}\\
+{\large {\the\day.\the\month.\the\year}}\\
+%\end{flushleft}
+
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+%{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+ % Include a department/university logo - this will require the graphicx package
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\end{document}

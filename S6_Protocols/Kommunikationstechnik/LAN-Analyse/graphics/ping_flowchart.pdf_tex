@@ -1,0 +1,152 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ping_flowchart.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{422.38509073bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.59711576)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ping_flowchart.pdf}}%
+    \put(0.34495994,0.57125391){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) reply\end{tabular}}}}%
+    \put(0.25575421,0.57017859){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ping_flowchart.pdf}}%
+    \put(0.25575421,0.68499301){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0.24131905,0.64668785){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 8\end{tabular}}}}%
+    \put(0.34473936,0.68495768){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) request\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ping_flowchart.pdf}}%
+    \put(0.34506004,0.64389021){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ping_flowchart.pdf}}%
+    \put(0.45528909,0.64600748){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ping_flowchart.pdf}}%
+    \put(0.24505275,0.53129208){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 0\end{tabular}}}}%
+    \put(0.34709257,0.53030758){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0.45586372,0.531118){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0.34495994,0.34130977){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) reply\end{tabular}}}}%
+    \put(0.25575421,0.34023444){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ping_flowchart.pdf}}%
+    \put(0.25575421,0.45504886){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0.241319,0.4167437){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 8\end{tabular}}}}%
+    \put(0.34473931,0.45501353){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) request\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ping_flowchart.pdf}}%
+    \put(0.34505994,0.41394606){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{ping_flowchart.pdf}}%
+    \put(0.45528898,0.41606334){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{ping_flowchart.pdf}}%
+    \put(0.2450527,0.30134783){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 0\end{tabular}}}}%
+    \put(0.34709257,0.30036333){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0.45586372,0.30117375){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(-0.00122075,1.57798435){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sender\\192.168.50.16\end{tabular}}}}%
+    \put(0.8244158,1.57778725){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Empfänger\\192.168.50.14\end{tabular}}}}%
+    \put(0.13275077,0.00380212){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta t$\end{tabular}}}}%
+    \put(0.13768851,1.45864372){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.24120462,1.45734113){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: ff:ff:ff:ff:ff:ff\end{tabular}}}}%
+    \put(0.46162759,1.46034849){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Target: 192.168.50.14\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{ping_flowchart.pdf}}%
+    \put(0.04163743,1.34496536){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.547 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.26344745,1.49780466){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ARP\end{tabular}}}}%
+    \put(0.34495984,1.3836051){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reply (OP2)\end{tabular}}}}%
+    \put(0.34474136,1.49823193){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Broadcast (OP1)\end{tabular}}}}%
+    \put(0.26344745,1.38252972){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ARP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{ping_flowchart.pdf}}%
+    \put(0.31546952,1.34104908){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sender MAC: 98:fa:9b:72:a1:57\end{tabular}}}}%
+    \put(0.34495989,1.03380576){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reply (OP2)\end{tabular}}}}%
+    \put(0.26113817,1.03273049){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ARP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{ping_flowchart.pdf}}%
+    \put(0.31546958,0.99124982){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sender MAC: 98:fa:9b:72:a1:57\end{tabular}}}}%
+    \put(0.34495989,0.91838988){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reply (OP2)\end{tabular}}}}%
+    \put(0.26113817,0.91731445){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ARP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{ping_flowchart.pdf}}%
+    \put(0.31546958,0.87583383){\color[rgb]{0.67843137,0.70980392,0.74117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sender MAC: 98:fa:9b:72:a1:57\end{tabular}}}}%
+    \put(0.34495994,0.80297389){\color[rgb]{0.80784314,0.83137255,0.85490196}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Reply (OP2)\end{tabular}}}}%
+    \put(0.26113822,0.80189851){\color[rgb]{0.80784314,0.83137255,0.85490196}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ARP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{ping_flowchart.pdf}}%
+    \put(0.31546963,0.76041774){\color[rgb]{0.80784314,0.83137255,0.85490196}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sender MAC: 98:fa:9b:72:a1:57\end{tabular}}}}%
+    \put(0.34495994,1.15366085){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) reply\end{tabular}}}}%
+    \put(0.25575421,1.15258552){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{ping_flowchart.pdf}}%
+    \put(0.34495994,0.1104777){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) reply\end{tabular}}}}%
+    \put(0.25575421,0.10940237){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{ping_flowchart.pdf}}%
+    \put(0.25575421,0.2242168){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0.24131905,0.18591163){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 8\end{tabular}}}}%
+    \put(0.34473936,0.22418147){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) request\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{ping_flowchart.pdf}}%
+    \put(0.34506004,0.183114){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{ping_flowchart.pdf}}%
+    \put(0.45528898,0.18523127){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{ping_flowchart.pdf}}%
+    \put(0.24505275,0.07051577){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 0\end{tabular}}}}%
+    \put(0.34709257,0.06953127){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0.45586372,0.07034168){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0.04115422,1.22991024){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.044 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04163743,1.11442536){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.310 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04308707,0.99424617){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2.356 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04163743,0.76371095){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1.797 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.03360087,0.64763724){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1008.4 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04260386,0.53083006){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.693 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.03360087,0.41642586){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1016.1 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04163743,0.30202493){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.775 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.03360084,0.1863321){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$1014.6 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04163743,0.0726951){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.713 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0.04260386,0.87971883){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.262 \, \si{\milli\second}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{ping_flowchart.pdf}}%
+    \put(0.25575421,1.26739992){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ICMP\end{tabular}}}}%
+    \put(0.241319,1.22909475){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 8\end{tabular}}}}%
+    \put(0.34473931,1.26736459){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Echo (ping) request\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{ping_flowchart.pdf}}%
+    \put(0.34505994,1.22629717){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{ping_flowchart.pdf}}%
+    \put(0.45528898,1.22841439){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{ping_flowchart.pdf}}%
+    \put(0.2450527,1.11369896){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Type: 0\end{tabular}}}}%
+    \put(0.34709257,1.11271447){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Code: 0\end{tabular}}}}%
+    \put(0.45586372,1.11352488){\color[rgb]{0.20392157,0.22745098,0.25098039}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data (32 Byte): abcde...\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

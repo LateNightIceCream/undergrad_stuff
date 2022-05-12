@@ -1,0 +1,9 @@
+Beim Ethernetzugriffsverfahren Carrier Sense Multiple Access \emph{CSMA} (Mehrfachzugriff mit Trägerprüfung) prüfen alle Teilnehmer das Übertragungsmedium auf dessen Zustand. Ist das Medium frei, kann gesendet werden, ist es belegt, wird gewartet bis es frei ist. Das Medium gilt als frei, wenn es für 96 Bitzeiten nicht belegt ist (z.B. $960 \, \si{\nano\second}$ bei $100 \, \si{\mega\bit\per\second}$).\\
+
+Da nur lokal geprüft wird, kann bei der Ethernet- (Bus-) Übertragung eine Leitung durch Laufzeitunterschiede verschiedener Signale als frei erscheinen, obwohl auf der Leitung noch ein Signal \glqq wandert\grqq, wodruch fälschlicherweise gesendet wird und es es zu einer \emph{Kollision} kommt. Das CSMA-Verfahren wird demnach weiterhin unterschieden nach der Art der Kollisionsbehandlung.
+
+\begin{description}
+\item[Collision Avoidance (CA):] Ready to Send (RTS) Pakete gesendet bei Sendewunsch, Clear to Send (CTS) erhalten, falls frei. Genutzt in WLANs/Funk, da aufgrund der Reichweite keine komplette Überwachung des Mediums möglich.
+\item[Collision Detection (CD):] Bei Kollision wird eine zufällige Zeit gewartet und dann erneut geprüft. Bei Überschreiten einer maximalen Anzahl von Versuchen tritt ein Fehler auf. Genutzt in LANs.
+\item[Collision Resolution (CR):] Bei Kollision wird eine Prioritätsanalyse durchgeführt, wer zuerst angefangen hat, erhält das folgende Senderecht.
+\end{description}

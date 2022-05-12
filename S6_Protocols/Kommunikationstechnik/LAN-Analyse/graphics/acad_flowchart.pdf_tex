@@ -1,0 +1,242 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'acad_flowchart.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{485.50114932bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.6770991)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{acad_flowchart.pdf}}%
+    \put(0.22224698,2.28586847){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DNS\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{acad_flowchart.pdf}}%
+    \put(0.30973297,2.24980763){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}addr: 212.201.38.160\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{acad_flowchart.pdf}}%
+    \put(-0.00142713,2.66062629){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client\\192.168.50.21\end{tabular}}}}%
+    \put(0.72806037,2.16866061){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Server\\212.201.38.160\\(acad-30.na.hs-wismar.de)\end{tabular}}}}%
+    \put(0.09323528,0.00147138){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t$\end{tabular}}}}%
+    \put(0.11942367,2.55680016){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.26232074,2.55828331){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Query: acad-30.na.hs-wismar.de\end{tabular}}}}%
+    \put(0.02569766,2.45841481){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.0379 \, \si{\second}$\end{tabular}}}}%
+    \put(0.22549939,2.591228){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DNS\end{tabular}}}}%
+    \put(0.29974933,2.49151671){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Answer, acad-30.na.hs-wismar.de:\end{tabular}}}}%
+    \put(0.29955926,2.59124184){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Request\end{tabular}}}}%
+    \put(0.22352221,2.49167252){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DNS\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{acad_flowchart.pdf}}%
+    \put(0.30973293,2.45449305){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}addr: 212.201.38.160\end{tabular}}}}%
+    \put(0.02838619,2.356692){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.0263 \, \si{\second}$\end{tabular}}}}%
+    \put(0.72806037,2.65035524){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Server\\192.76.157.4\\(statler.hs-wismar.de)\\\end{tabular}}}}%
+    \put(0.72806037,2.36047137){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Server\\192.76.157.9\\(kermit.hs-wismar.de)\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{acad_flowchart.pdf}}%
+    \put(0.26232079,2.35359789){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Query: acad-30.na.hs-wismar.de\end{tabular}}}}%
+    \put(0.22208203,2.38627473){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DNS\end{tabular}}}}%
+    \put(0.29974938,2.28683127){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Answer, acad-30.na.hs-wismar.de:\end{tabular}}}}%
+    \put(0.29955935,2.38655641){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Request\end{tabular}}}}%
+    \put(0.0308908,2.2532384){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.0396 \, \si{\second}$\end{tabular}}}}%
+    \put(0.03495288,2.15198806){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$0.0396 \, \si{\second}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{acad_flowchart.pdf}}%
+    \put(0.2244417,2.18573305){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{acad_flowchart.pdf}}%
+    \put(0.21151222,2.15034515){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{acad_flowchart.pdf}}%
+    \put(0.36102405,2.15102972){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207197,2.10959662){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 64240, Scale: 8 (256)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{acad_flowchart.pdf}}%
+    \put(0.54162491,2.15084){\color[rgb]{0.18431373,0.61960784,0.26666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SYN\end{tabular}}}}%
+    \put(0.21274327,2.08149107){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MSS: 1460 \end{tabular}}}}%
+    \put(0.58764173,2.11244848){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 0\end{tabular}}}}%
+    \put(0.58362627,2.07533829){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{acad_flowchart.pdf}}%
+    \put(0.22444168,2.00808158){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{acad_flowchart.pdf}}%
+    \put(0.21151218,1.97269365){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{acad_flowchart.pdf}}%
+    \put(0.3252887,1.97337826){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207189,1.93194517){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65535, Scale: 0 (1)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{acad_flowchart.pdf}}%
+    \put(0.51179511,1.97318854){\color[rgb]{0.18431373,0.61960784,0.26666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SYN, ACK\end{tabular}}}}%
+    \put(0.21274322,1.90383961){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MSS: 1380 \end{tabular}}}}%
+    \put(0.58764173,1.93479702){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 0\end{tabular}}}}%
+    \put(0.58362627,1.89768688){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{acad_flowchart.pdf}}%
+    \put(0.2244417,1.83043007){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{acad_flowchart.pdf}}%
+    \put(0.21151227,1.79504211){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{acad_flowchart.pdf}}%
+    \put(0.36102409,1.79572667){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207202,1.75429362){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 131072\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{acad_flowchart.pdf}}%
+    \put(0.54162491,1.795537){\color[rgb]{0.18431373,0.61960784,0.26666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0.21274336,1.72618807){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.58764173,1.75714548){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 1\end{tabular}}}}%
+    \put(0.58362627,1.72003525){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 1\end{tabular}}}}%
+    \put(0.34318348,1.90255502){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+    \put(0.34101824,2.08018982){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+    \put(0.21351715,1.72164315){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{acad_flowchart.pdf}}%
+    \put(0.21543775,1.6527786){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{acad_flowchart.pdf}}%
+    \put(0.21151227,1.61739065){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{acad_flowchart.pdf}}%
+    \put(0.36102409,1.61807522){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207202,1.57664217){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 131072\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{acad_flowchart.pdf}}%
+    \put(0.2127434,1.54853661){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.58764173,1.57949402){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 1\end{tabular}}}}%
+    \put(0.58362627,1.5423838){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 1\end{tabular}}}}%
+    \put(0.21351715,1.54399169){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 462\end{tabular}}}}%
+    \put(0.33984978,1.65420341){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}GET: /\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{acad_flowchart.pdf}}%
+    \put(0.21543769,1.47512713){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{acad_flowchart.pdf}}%
+    \put(0.21151218,1.4397392){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{acad_flowchart.pdf}}%
+    \put(0.32377559,1.44042376){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207193,1.39899071){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65073\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{acad_flowchart.pdf}}%
+    \put(0.21274331,1.37088516){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.58764164,1.40184257){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 1\end{tabular}}}}%
+    \put(0.5677394,1.36473234){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 463\end{tabular}}}}%
+    \put(0.21351706,1.36634024){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 87\end{tabular}}}}%
+    \put(0.5161272,1.44156055){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PSH, ACK\end{tabular}}}}%
+    \put(0.51550099,1.61839639){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PSH, ACK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{acad_flowchart.pdf}}%
+    \put(0.21543769,1.29747561){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{acad_flowchart.pdf}}%
+    \put(0.21151218,1.26208765){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{acad_flowchart.pdf}}%
+    \put(0.32377559,1.26277222){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207193,1.22133917){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65073\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{acad_flowchart.pdf}}%
+    \put(0.21274331,1.19323352){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.57122228,1.22419103){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 88\end{tabular}}}}%
+    \put(0.54443935,1.1870808){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 1468\end{tabular}}}}%
+    \put(0.21351706,1.18868869){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 1380\end{tabular}}}}%
+    \put(0.54384503,1.26390901){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{acad_flowchart.pdf}}%
+    \put(0.22444172,1.11982415){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{acad_flowchart.pdf}}%
+    \put(0.21151227,1.0844362){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{acad_flowchart.pdf}}%
+    \put(0.36102409,1.08512076){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207202,1.04368771){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 131072\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{acad_flowchart.pdf}}%
+    \put(0.54162491,1.084931){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0.2127434,1.01558216){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.56008524,1.04653948){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 463\end{tabular}}}}%
+    \put(0.54549534,1.00942943){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 1468\end{tabular}}}}%
+    \put(0.21351715,1.01103733){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{acad_flowchart.pdf}}%
+    \put(0.21543769,0.94217268){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{acad_flowchart.pdf}}%
+    \put(0.21151218,0.90678465){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{acad_flowchart.pdf}}%
+    \put(0.32377559,0.90746922){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207193,0.86603617){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65073\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{acad_flowchart.pdf}}%
+    \put(0.21274331,0.83793061){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.54825445,0.86888812){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 1468\end{tabular}}}}%
+    \put(0.5574782,0.83177789){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 463\end{tabular}}}}%
+    \put(0.21351706,0.83338578){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 1380\end{tabular}}}}%
+    \put(0.54384512,0.90860601){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{acad_flowchart.pdf}}%
+    \put(0.21543784,0.76452116){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{acad_flowchart.pdf}}%
+    \put(0.21151236,0.72913311){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{acad_flowchart.pdf}}%
+    \put(0.32377577,0.72981768){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207211,0.68838462){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65073\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{acad_flowchart.pdf}}%
+    \put(0.21274349,0.66027907){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.54992676,0.69123657){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 2848\end{tabular}}}}%
+    \put(0.55138062,0.65412634){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 463\end{tabular}}}}%
+    \put(0.21351724,0.65573424){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 1380\end{tabular}}}}%
+    \put(0.54384521,0.73095446){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{acad_flowchart.pdf}}%
+    \put(0.21543786,0.58686969){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP/HTTP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{acad_flowchart.pdf}}%
+    \put(0.21151236,0.55148156){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 80\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=44]{acad_flowchart.pdf}}%
+    \put(0.32377573,0.55216613){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 56682\end{tabular}}}}%
+    \put(0.21207211,0.51073308){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 65073\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=45]{acad_flowchart.pdf}}%
+    \put(0.21274349,0.48262753){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.53917396,0.51358503){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 4228\end{tabular}}}}%
+    \put(0.55138062,0.4764748){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 463\end{tabular}}}}%
+    \put(0.21351728,0.47808269){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 488\end{tabular}}}}%
+    \put(0.49601176,0.55330292){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FIN, PSH, ACK\end{tabular}}}}%
+    \put(0.34111004,0.58686969){\color[rgb]{0.5254902,0.55686275,0.58823529}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}200 OK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=46]{acad_flowchart.pdf}}%
+    \put(0.2244417,0.40921823){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=47]{acad_flowchart.pdf}}%
+    \put(0.21151227,0.3738302){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=48]{acad_flowchart.pdf}}%
+    \put(0.36102405,0.37451477){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207202,0.33308171){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 131072\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=49]{acad_flowchart.pdf}}%
+    \put(0.51412089,0.374325){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FIN, ACK\end{tabular}}}}%
+    \put(0.2127434,0.30497616){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.56008524,0.33593348){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 463\end{tabular}}}}%
+    \put(0.54549534,0.29882343){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 4717\end{tabular}}}}%
+    \put(0.21351715,0.30043133){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=50]{acad_flowchart.pdf}}%
+    \put(0.22444168,0.22384276){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}TCP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=51]{acad_flowchart.pdf}}%
+    \put(0.21151227,0.18845474){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SRC: 56682\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=52]{acad_flowchart.pdf}}%
+    \put(0.36102405,0.1891393){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80\end{tabular}}}}%
+    \put(0.21207202,0.14770625){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN: 131072\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=53]{acad_flowchart.pdf}}%
+    \put(0.57372775,0.18894954){\color[rgb]{0.12941176,0.14509804,0.16078431}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK\end{tabular}}}}%
+    \put(0.2127434,0.1196007){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.54636307,0.15055802){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ: 4717\end{tabular}}}}%
+    \put(0.54549534,0.11344797){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK: 463\end{tabular}}}}%
+    \put(0.21351715,0.11505586){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Len = 0\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

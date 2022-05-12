@@ -1,0 +1,71 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ethernetframe.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{475.3346286bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.26300788)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ethernetframe.pdf}}%
+    \put(0.00294832,0.24583247){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Schicht 2 Ethernet Frame (ohne optionales 802.1Q-Tag)\end{tabular}}}}%
+    \put(0.0551908,0.20537585){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ZIEL\\MAC\end{tabular}}}}%
+    \put(0.15470266,0.20600822){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}QUELL\\MAC\end{tabular}}}}%
+    \put(0.02233717,0.14736001){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6 Byte\end{tabular}}}}%
+    \put(0.12200155,0.14736001){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6 Byte\end{tabular}}}}%
+    \put(0.23535963,0.20428292){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ETHERTYPE\\oder LÄNGE\end{tabular}}}}%
+    \put(0.26445613,0.14736001){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2 Byte\end{tabular}}}}%
+    \put(0.52790449,0.18863811){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}NUTZDATEN\end{tabular}}}}%
+    \put(0.51239009,0.14736001){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}46 - 1500 Byte\end{tabular}}}}%
+    \put(0.82788963,0.20293963){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}FRAME CHECK\\SEQUENCE\end{tabular}}}}%
+    \put(0.87035363,0.14752384){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4 Byte\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ethernetframe.pdf}}%
+    \put(0.42983853,0.03339037){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}max. 1518 Byte\\min. 64 Byte\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

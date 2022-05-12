@@ -1,0 +1,73 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'dns_format.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{420.35413055bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.13955567)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{dns_format.pdf}}%
+    \put(0.02955943,0.046771){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Paketlänge\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{dns_format.pdf}}%
+    \put(0.20124299,0.06332047){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Padding-\\länge\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{dns_format.pdf}}%
+    \put(0.04926054,0.11447472){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4 Byte\end{tabular}}}}%
+    \put(0.21032176,0.11621981){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1 Byte\end{tabular}}}}%
+    \put(0.38517579,0.04687646){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Payload\end{tabular}}}}%
+    \put(0.38804724,0.11355385){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Variabel\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{dns_format.pdf}}%
+    \put(0.57146354,0.04636301){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Padding\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{dns_format.pdf}}%
+    \put(0.81654006,0.0768995){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}MAC\end{tabular}}}}%
+    \put(0.80705325,0.12150098){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}20 Byte\end{tabular}}}}%
+    \put(0.58835432,0.11644456){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4 Byte\end{tabular}}}}%
+    \put(0.70243994,0.0482023){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(message authentication\\code)\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

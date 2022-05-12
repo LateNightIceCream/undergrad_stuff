@@ -1,0 +1,18 @@
+\frametitle{Aufgabe 1: Rauschanalyse}
+\begin{lstlisting}
+      ...
+      xmue1 = mean(n1)
+      var1  = var(n1)
+      ...
+      \end{lstlisting}
+
+
+      \begin{table}[H]
+        \begin{tabular}{
+          >{\columncolor{gray0}}l ll}
+          Signal & \cellcolor{gray0}Mittelwert & \cellcolor{gray0}Varianz \\
+          $n_1(t)$ &  $-0.06$                            & $4.00$                              \\
+          $n_2(t)$    &  $0.96$                              &            $3.94$
+        \end{tabular}
+      \end{table}
+

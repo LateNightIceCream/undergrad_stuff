@@ -1,0 +1,20 @@
+Bei einer Messung treten gewöhnlicherweise systematische Fehler auf. Diese sind
+durch die Messeinrichtung bedingt und müssen vor der Messung erfasst und
+korrigiert werden, um möglichst genaue Messergebnisse erzielen zu können. Diese
+Störeinflüsse treten z.B. durch die ungewollten Eigenschaften von Messleitungen
+auf, da sie eigene Übertragungsfunktionen und Reflexionsfaktoren besitzen,
+welche das Messergebnis verfälschen.
+
+Bei der \emph{Kalibrierung} wird die Abweichung der Messeinrichtung mit einem
+Referenzobjekt (Standard, Normal) verglichen. Beim Netzwerkanalysator ist dies
+typischerweise ein \glqq Short, Open, Load\grqq (SOL) bzw. \glqq Short, Open,
+Load, Through\grqq (SOLT), welches die Messleitung (Kabel, Verbindungen) mit den jeweiligen Impedanzen
+abschließt (Mech-Cal). Diese werden nacheinander mit den verwendeten Ports des NWAs
+verbunden. Die Kalibrierung kann ebenfalls mit einem automatischen
+Kalibrierungsmodul (eCal) durchgeführt werden, welches für jeden Port die
+entsprechenden Kalibrierungsbedingungen automatisch bereitstellt. Diese Methode
+verringert die mechanische Belastung der Verbindungen und ist, gerade bei 4-Port-Kalibrierung, schneller.
+
+Vor der Kalibrierung des NWAs muss der zu messende Frequenzbereich eingestellt
+werden (start \& stop frequency). Bei einer Umstellung des Frequenzbereiches muss
+erneut kalibriert werden.

@@ -1,0 +1,75 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'actually_dns_format.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{307.82475806bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.67512556)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{actually_dns_format.pdf}}%
+    \put(0.15082023,0.59206555){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}identification\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{actually_dns_format.pdf}}%
+    \put(0.70313364,0.59420524){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}flags\end{tabular}}}}%
+    \put(0.11299325,0.5263177){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}num. of questions\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{actually_dns_format.pdf}}%
+    \put(-0.00218107,0.65002138){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.47131418,0.65047074){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}16\end{tabular}}}}%
+    \put(0.96065349,0.64935328){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}32\end{tabular}}}}%
+    \put(0.59283686,0.52794083){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}num. of answer RRs\end{tabular}}}}%
+    \put(0.56892485,0.46191848){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}num. of additional RRs\end{tabular}}}}%
+    \put(0.0762686,0.46085712){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}num. of authority RRs\end{tabular}}}}%
+    \put(0.42149782,0.37715952){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}questions\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{actually_dns_format.pdf}}%
+    \put(0.43523244,0.26048747){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}answers\end{tabular}}}}%
+    \put(0.43851896,0.12834387){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}authority\end{tabular}}}}%
+    \put(0.34659013,0.02953519){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}additional information\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{actually_dns_format.pdf}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,105 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \includepdf{./titlepage/titlepage.pdf}
+  \clearpage
+  \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Konfiguration des MSP430 zur Port-Ein- und Ausgabe}
+Jeder Port besteht aus 8 physischen Pins (Px.0 bis Px.7) und hat entsprechend mehrere 8-bit Register, die zur
+Konfiguration dienen. Die für die Ein- und Ausgabefunktion relevanten Register
+sind:
+\begin{enumerate}
+\item[] \textbf{PxSEL}
+  \begin{enumerate}
+    \item[] \textit{Function Select Register}: Legt fest, welche Funktion verwendet wird.
+      \begin{enumerate}
+        \item[0:]  I/O-Funktion
+        \item[1:]  Peripherie-Funktion
+      \end{enumerate}
+  \end{enumerate}
+\item[] \textbf{PxDIR}
+  \begin{enumerate}
+  \item[] \textit{Direction Register}: Legt die Richtung, also Ein- oder Ausgabe fest.
+  \begin{enumerate}
+    \item[0:]  Input
+    \item[1:]  Output
+  \end{enumerate}
+  \end{enumerate}
+\item[] \textbf{PxOUT/PxIN}
+  \begin{enumerate}
+\item[]    \textit{Input/Output Register}: Bestimmen, abhängig vom Wert des PxDIR, den
+   eigentlichen Ein- bzw. Ausgabewert.
+ \end{enumerate}
+\item[] \textbf{PxREN}
+  \begin{enumerate}
+    \item[] \emph{Resistor ENable Register}: Legt fest, ob Pullup- oder Pulldown
+      Widerstände verwendet werden sollen (PxDIR auf Input).
+      \begin{enumerate}
+        \item[0:] Widerstand deaktiviert
+        \item[1:] Der Wert in \emph{PxOUT} entscheidet ob Pullup/down
+          \begin{enumerate}
+            \item[0:] Pulldown
+            \item[1:] Pullup
+          \end{enumerate}
+      \end{enumerate}
+  \end{enumerate}
+\end{enumerate}
+
+\section{LCD-Anschluss und Konfiguration des MSP430}
+Das LCD kann entweder im \textbf{8-bit}- oder im \textbf{4-bit}-Modus 
+betrieben werden. Im 8-bit-Modus werden die Anschlüsse D0 bis D7 des LCDs zur
+simultanen Datenübertragung eines Bytes verwendet. Der 4-bit Modus benötigt nur die Anschlüsse D4 bis
+D7, wobei zuerst das höherwertigere und dann das niederwertigere Nibble gesendet
+wird.
+
+Unabhängig vom Modus werden außerdem die 3 Steuerbits Register Select
+\textbf{RS}, Read/Write \textbf{R/W}
+sowie Enable \textbf{E} benötigt.
+
+\begin{enumerate}
+\item[] \textbf{RS}
+  \begin{enumerate}
+    \item[] Wählt das Register aus in das geschrieben bzw. aus welchem gelesen
+      werden soll.
+      \begin{enumerate}
+      \item[1:] Data Register (R+W)
+        \item[0:] Instruction Register, wenn geschrieben wird. Busy Flag und
+          Address Counter wenn
+          gelesen wird
+      \end{enumerate}
+  \end{enumerate}
+
+\item[] \textbf{R/W}
+  \begin{enumerate}
+    \item[] Bestimmt Schreibe- oder Lesevorgang
+      \begin{enumerate}
+       \item[1:] Read
+       \item[0:] Write
+      \end{enumerate}
+  \end{enumerate}
+
+\item[] \textbf{E}
+  \begin{enumerate}
+    \item[] Übernahme des LCD-Befehls/der Daten bei High-Low-Flanke des Enable bits 
+       \end{enumerate}
+\end{enumerate}
+
+Instruction Register: Enthält Befehle, welche über deren Addressen vom
+Mikrokontroller angesprochen werden können.
+
+\section{Initialisierung eines LC-Displays}
+\section{Zeichendarstellung}
+  
+ \end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:

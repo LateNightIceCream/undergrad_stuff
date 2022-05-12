@@ -1,0 +1,121 @@
+\documentclass[aspectratio=1610, xcolor=table]{beamer}
+
+\input{colors}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\graphicspath{{graphics/}}
+\usepackage{listings,bera}
+\usepackage[binary-units]{siunitx}
+\usepackage{fontspec}
+\usepackage{tgheros}
+\usepackage{inconsolata}
+\usetheme{bjeldbak}
+
+\setmainfont{TeX Gyre Heros}
+
+\setmonofont{Inconsolatazi4}
+\lstset{
+  language=Matlab,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{cyan5},
+  identifierstyle=\color{black},
+  rulecolor=\color{gray1},
+  frame=single,
+  frameround=tttt,
+  %framesep=1.382em,
+  backgroundcolor=\color{gray0},
+}
+
+\newcommand{\smallemskip}{
+  \vspace{0.145898em}
+}
+\newcommand{\medemskip}{
+  \vspace{0.382em}
+}
+\newcommand{\bigemskip}{
+  \vspace{0.618em}
+}
+\newcommand{\smallgrskip}{
+  \vspace{0.0901699\paperheight}
+}
+\newcommand{\medgrskip}{
+  \vspace{0.145898\paperheight}
+}
+\newcommand{\biggrskip}{
+  \vspace{0.236067978\paperheight}
+}
+
+% 1: first column content
+% 2: second column content
+% 3: width of first column
+\newcommand{\twocolumns}[3]{
+    \begin{columns}
+      \begin{column}{#3}
+          #1
+        \end{column}
+        \begin{column}{\dimexpr(\textwidth-#3)}
+          #2
+        \end{column}
+    \end{columns}
+}
+
+
+\title{Informationsübertragung}
+\subtitle{Testataufgaben}
+\author{Richard \color{hsblue}{\textsc{Grünert}}}
+\institute{Hochschule Wismar}
+\titlegraphic{
+}
+
+\begin{document}
+
+{
+  \setbeamertemplate{headline}{}
+  \begin{frame}
+    \twocolumns{
+      \begin{center}
+      \includegraphics[width=0.618\textwidth]{logo}
+    \end{center}
+    }{
+
+      \titlepage
+
+    }{0.382\textwidth}
+  \end{frame}
+}
+
+  % {%
+  %   \setbeamertemplate{headline}{}
+  %   \frame{\titlepage}
+  % }
+  \addtocounter{framenumber}{-1}
+
+  \section{Aufgabe 1}
+  \input{slides/Aufgabe1}
+
+  \section{Aufgabe 2}
+  \input{slides/Aufgabe2}
+
+  \section{Aufgabe 3}
+  \input{slides/Aufgabe3}
+
+  \section{Aufgabe 4}
+  \input{slides/Aufgabe4}
+
+  \section{Aufgabe 5}
+  \input{slides/Aufgabe5}
+
+  \section{Aufgabe 6}
+  \input{slides/Aufgabe6}
+
+  \section{Aufgabe 7}
+  \input{slides/Aufgabe7}
+
+  \section{Aufgabe 8}
+  \input{slides/Aufgabe8}
+
+  \section{Aufgabe 9}
+  \input{slides/Aufgabe9}
+  
+\end{document}

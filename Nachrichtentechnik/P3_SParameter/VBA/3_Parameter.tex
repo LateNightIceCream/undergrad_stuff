@@ -1,0 +1,51 @@
+\subsubsection{Einfügedämpfung}
+Die Einfügedämpfung ist das Verhältnis der Leistung, die an einer Last über z.B.
+eine Leitung umgesetzt wird, zu der Leistung, die
+\emph{direkt} an der Last umgesetzt werden würde (ohne die Leitung). Sie gibt
+also den Leistungsverlust bzw. die Dämpfung an, die das Signal durch das \textit{Einfügen} der Leitung in den
+Signalweg erfährt.
+
+\subsubsection{Verstärkung}
+Die Verstärkung ist allgemein das Verhältnis von Ausgangs- zu Eingangsgröße,
+also z.B. Aus- zu Eingangsspannung. Ist die Verstärkung kleiner eins, handelt es
+sich um eine Dämpfung. Logarithmisch/im Dezibel-Maß kann sie abhängig von der
+betrachtetn Größe dargestellt werden durch
+\[V = 10 \cdot \log_{10}{\frac{P_2}{P_1}}\]
+wenn es sich um eine Leistung handelt oder
+\[V = 20 \cdot \log_{10}{\frac{U_2}{U_1}}\]
+wenn es sich um eine Spannung handelt.
+
+\subsubsection{Reflexionsdämpfung}
+Die Reflexionsdämpfung $R$ ist die Dämpfung der reflektierten Welle.
+\[R = \frac{P_\mathrm{reflektiert}}{P_\mathrm{ein}}\]
+Sie entspricht dem inversen Reflexionsfaktor.
+
+
+\subsubsection{S-Parameter}
+Die S(treu)-Parameter (vom engl. \emph{Scattering-Parameter}) sind eine Reihe an
+komplexwertigen Parametern (Betrag + Phase) zur Charakterisierung von n-Toren,
+in der Regel Vierpole.
+
+Bei der Berechnung der S-Parameter bezieht man sich auf ein Vierpolmodell, bei
+welchem $a_1$ und $a_2$ die auf das jeweilige Tor zulaufenden und $b_1$ und
+$b_2$ die vom jeweiligen Tor ablaufenden Wellengrößen sind (Tor 1/Tor 2).
+
+Bei einem Vierpolnetzwerk existieren die folgenden S-Parameter:
+\begin{description}
+  \item[$S_{11}$, der Reflexionskoeffizient, primärseitig,] beschreibt das
+    Reflexions-zu-Transmissions-Verhältnis von Spannungs- bzw. Stromwellen.
+    \[S_{11} = \frac{b_1}{a_1}\]
+    \item[$S_{21}$, der Transmissionskoeffizient, primärseitig,] beschreibt das
+      Verhältnis der am Tor 2 auslaufenden Welle zur am Tor 1 einlaufenden
+      Welle. Über der Frequenz also die Übertragungsfunktion. (\glqq Ausgang zu
+      Eingang\grqq)
+      \[S_{21} = \frac{b_2}{a_1}\]
+    \item[$S_{22}$, der Reflexionskoeffizient, sekundärseitig]
+      Wie $S_{11}$ nur vom anderen Tor blickend.
+      \[S_{22} = \frac{b_2}{a_2}\]
+    \item[$S_{12}$, der Transmissionskoeffizient, sekundärseitig]
+      Wie $S_{21}$ nur vom anderen Tor blickend.
+      \[S_{12} = \frac{b_1}{a_2}\]
+\end{description}
+
+Der erste Index steht jeweils für den Wirkungsort, der zweite für die Ursache.

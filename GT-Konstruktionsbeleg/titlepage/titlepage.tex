@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hochschule Wismar Assignment Title Page
+%
+% Originally a template downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%   Modified by Elsa Slattegard to fit Uppsala university
+%     Then modified by Richard Grünert to fit Hochschule Wismar
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+%----------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[ngerman]{babel}
+\usepackage{datetime}
+\usepackage{layout}
+\usepackage{makecell}
+
+\def\boxitem#1{\setbox0=\vbox{#1}{\centering\makebox[0pt]{%
+  \fboxrule=2pt\color{red}\fbox{\hspace{\leftmargini}\color{black}\box0}}\par}}
+
+\definecolor{hsblue}{HTML}{00B5DF}
+\definecolor{hsblack}{HTML}{3B4137}
+
+\usepackage[a4paper,
+            left=0.1458980337503154\paperwidth,
+            right=0.1458980337503154\paperwidth,
+            top=0.02128623625220817\paperheight,
+            bottom=0.1458980337503154\paperheight]
+            {geometry}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+%----------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+    \begin{tabular}{L{0.23606797749978964\paperwidth} L{\paperwidth}}
+
+      \noindent\begin{minipage}[t][0.3819660112501052\paperheight][t]{\textwidth}
+
+      \includegraphics[scale=0.09016994374947421]{logo.jpg}
+      \end{minipage} &
+
+      \color{hsblack}\large \textsc{\textbf{Hochschule Wismar}} \newline[0.005024998740641485\paperheight]
+      \color{hsblue}\textbf{Fakultät für \newline Ingenieurwissenschaften} \newline[0.005024998740641485\paperheight]
+      \color{hsblack}\small Bereich Elektrotechnik und Informatik
+
+
+
+    \end{tabular}
+
+\center
+
+%----------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------
+
+\vspace{-0.095491503\paperheight}
+{\Huge \bfseries Konstruktionsbeleg} \\[0in] % Title of your document
+\vspace{0.05572809000084119\paperheight}
+\textsc{\Large \color{hsblack} Präziser Zeitgeber}
+\vspace{0.05572809000084119\paperheight}
+
+
+%----------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------
+
+\emph{Autor:} Richard {\textsc{Grünert}}\\[0.013155617496424828\paperheight]
+{\large {\the\day.\the\month.\the\year}}\\
+
+\vfill
+\begin{flushleft}
+
+  \begin{tabular}{L{0.23606797749978964\paperwidth} L{\paperwidth}}
+
+    \emph{Matrikelnummer:} & 289427 \\[0.005024998740641485\paperheight]
+    \emph{Studiengang:} & Informations-und Elektrotechnik, Ba.\\[0.005024998740641485\paperheight]
+    \emph{Fachsemester:} & 2 \\[0.005024998740641485\paperheight]
+    \emph{Betreuer:} & Prof. Dr.-Ing. Ansgar Wego\\
+
+  \end{tabular}
+\end{flushleft}
+\end{titlepage}
+
+\end{document}

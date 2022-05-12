@@ -1,0 +1,78 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'three_way.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{485.03772825bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.37199923)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{three_way.pdf}}%
+    \put(0.13862377,0.28666436){\color[rgb]{0.09411765,0.39215686,0.67058824}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80 SRC: 3026\end{tabular}}}}%
+    \put(0.29328776,0.28392468){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ=105738\end{tabular}}}}%
+    \put(0.44473628,0.28392468){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK=0\end{tabular}}}}%
+    \put(0.6172495,0.2862218){\color[rgb]{0.09411765,0.39215686,0.67058824}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN= 65535 Len= 0 MSS=1460\end{tabular}}}}%
+    \put(-0.00142849,0.34955274){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client\end{tabular}}}}%
+    \put(0.93397937,0.35635228){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Server\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{three_way.pdf}}%
+    \put(0.13862363,0.19504819){\color[rgb]{0.25098039,0.75294118,0.34117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 3026 SRC: 80\end{tabular}}}}%
+    \put(0.29328758,0.19230851){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ=110021\end{tabular}}}}%
+    \put(0.4447361,0.19230851){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK=105739\end{tabular}}}}%
+    \put(0.61724932,0.19460564){\color[rgb]{0.25098039,0.75294118,0.34117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN= 65535 Len= 0 MSS=1412\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{three_way.pdf}}%
+    \put(0.13862372,0.10580714){\color[rgb]{0.09411765,0.39215686,0.67058824}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DST: 80 SRC: 3026\end{tabular}}}}%
+    \put(0.29328776,0.10306746){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SEQ=105739\end{tabular}}}}%
+    \put(0.44473628,0.10306746){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ACK=110022\end{tabular}}}}%
+    \put(0.6172495,0.10536456){\color[rgb]{0.09411765,0.39215686,0.67058824}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WIN= 65535 Len= 0 MSS=1460\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{three_way.pdf}}%
+    \put(0.12900936,0.32011124){\color[rgb]{0.10980392,0.49411765,0.83921569}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}[SYN]\end{tabular}}}}%
+    \put(0.76087893,0.22990544){\color[rgb]{0.25098039,0.75294118,0.34117647}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}[SYN, ACK]\end{tabular}}}}%
+    \put(0.12993736,0.14114618){\color[rgb]{0.10980392,0.49411765,0.83921569}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}[ACK]\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

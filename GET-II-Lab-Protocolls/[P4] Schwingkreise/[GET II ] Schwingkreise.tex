@@ -1,0 +1,978 @@
+%//////////////////////////////////
+%/// P R E A M B L E
+
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[singlespacing]{setspace}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{gensymb}
+\usepackage{breqn}
+\usepackage{indentfirst}
+\usepackage{siunitx}
+\usepackage{tabularx, booktabs}
+\usepackage[calcwidth]{titlesec}
+%\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+
+\usepackage{multicol}
+%\usepackage{supertabular}
+
+\usepackage{svg}
+
+\widowpenalty = 4500
+\clubpenalty  = 4500
+
+\newcommand*\dif{\mathop{}\!\mathrm{d}}
+\newcommand*\shortminus{\scalebox{0.5}[1.0]{\( - \)}}
+\newcommand{\hspa}{\hspace{0.02128623625220817\paperwidth}}
+\newcommand{\hspb}{\hspace{0.013155617496424828\paperwidth}}
+
+\definecolor{hsblue}{HTML}{0cb5df}
+\definecolor{hsblueshade}{HTML}{b6e9f5}
+
+\setlength{\jot}{0.013155617496424828\paperheight}
+
+%%========================================
+%% circuitikz properties
+\usepackage[european, straightvoltages]{circuitikz}
+%\ctikzvalof{voltage/distance from node = .2}
+%\ctikzset{voltage/distance from node  =.5}% in \pgf@circ@Rlen units
+%\ctikzset{voltage/distance from line  =.25}% pos. between 0 and 1
+%\ctikzset{voltage/bump b/.initial     =1.5}%
+
+\ctikzset{current/distance            = .618}
+
+
+%%========================================
+
+%%
+%% Path settings
+%%
+\graphicspath{ {./graphics/} }
+
+\geometry{
+ a4paper,
+ total={0.6180339887498948\paperwidth,0.6180339887498948\paperheight},
+ top = 0.1458980337503154\paperheight,
+ bottom = 0.1458980337503154\paperheight
+ }
+
+\linespread{1.1458980337503154}
+
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection\hspb\textcolor{hsblueshade}{|}\hspa}{0pt}{\Large\bfseries}
+
+\setlength{\parskip}{0.013155617496424828\paperheight} % paragraph spacing
+
+\titlespacing{\section}       {0em}{0em}{0em}
+%\titlespacing{\subsection}   {0em}{.50em}{.25em}
+%\titlespacing{\subsubsection}{0em}{.50em}{.25em}
+%\titlespacing{\paragraph}    {0em}{.25em}{.25em}
+
+%//////////////////////////////////
+%/// D O C U M E N T
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \includepdf{Deckblatt.pdf}
+  \includepdf{./titlepage/titlepage.pdf}
+  \clearpage
+  \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vorbereitungsaufgaben}
+
+  % 1.1
+  \subsection{}
+
+    \begin{center}
+
+      \subsubsection*{Spule}
+      \large Reihenmodell
+
+        \begin{circuitikz}
+
+          \draw (-0.3819660112501051,0) to[R, l=$R_{sL}$, o-] (1.6180339887498948,0);
+          \draw (1.6180339887498948,0) to[L, l=$L_s$, -o] (1.6180339887498948*2+0.3819660112501051,0);
+
+        \end{circuitikz}
+      \end{center}
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_1/ESBs_Spule.pdf}
+    \end{center}
+
+    Der Verlustwinkel $\delta$ ist der Winkel der Spulenimpedanz $\underline{Z}$ mit der imaginären Achse der gaußschen Zahlenebene. $\tan{\delta}$ wird auch Verlustfaktor $d$ genannt.
+
+    $$\tan{\delta} = \frac{\omega L_s}{R_{sL}}$$
+
+    Die Güte $Q$ der realen Induktivität ist demnach als Kehrwert des Verlustfaktors definiert:
+
+    $$ Q_{Ls} = \frac{1}{\tan{\delta}} = \frac{R_{sL}}{\omega L_s}$$
+
+    % Parallelmodell Spule
+    \vspace{0.02128623625220817\paperheight}
+    \begin{center}
+    \large Parallelmodell
+
+      \begin{circuitikz}
+
+        \def\innerwidth{3}
+        \def\innerheight{\innerwidth*0.3819660112501051}
+        \def\klemmlength{\innerheight*0.6180339887498948}
+
+        \draw (0,\innerheight/2)  to[R, l=$R_{pL}$] (\innerwidth,\innerheight/2);
+        \draw (0,-\innerheight/2) to[L, l=$L_p$] (\innerwidth,-\innerheight/2);
+        \draw (-\klemmlength,\klemmlength/4) to[short, o-] (0,\klemmlength/4);
+        \draw (0,-\innerheight/2)  to[short] (0,\innerheight/2);
+        \draw (\innerwidth,-\innerheight/2)  to[short] (\innerwidth,\innerheight/2);
+        \draw (\innerwidth,\klemmlength/4) to[short, -o] (\innerwidth+\klemmlength,\klemmlength/4);
+
+      \end{circuitikz}
+    \end{center}
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_1/ESBp_Spule.pdf}
+    \end{center}
+
+    Der Verlustwinkel $\delta$ ist der Winkel der Spulenadmittanz $\underline{Y}$ mit der imaginären Achse der gaußschen Zahlenebene (Betrag).
+
+    $$\mid \tan{\delta} \mid=  \dfrac{\dfrac{1}{R_{pL}}}{\dfrac{1}{\omega L_p}} = \frac{\omega L_p}{R_{pL}}$$
+
+    Kehrwert des Verlustfaktors:
+
+    $$ Q_{Lp} = \frac{1}{\tan{\delta}} = \frac{R_{pL}}{\omega L_p}$$
+
+    $$ Q_{Lp} = Q_{Ls} = \frac{R_{pL}}{\omega L_p} = \frac{\omega L_s}{R_{sL}}$$
+
+    \pagebreak
+    \subsubsection*{Kondensator}
+    % Reihenmodell Kondensator
+    \begin{center}
+
+      \large Reihenmodell
+
+        \begin{circuitikz}
+
+          \draw (-0.3819660112501051,0) to[R, l=$R_{sC}$, o-] (1.6180339887498948,0);
+          \draw (1.6180339887498948,0) to[C, l=$C_s$, -o] (1.6180339887498948*2+0.3819660112501051,0);
+
+        \end{circuitikz}
+      \end{center}
+
+      \begin{center}
+        \includegraphics[scale=0.3819660112501051]{./R/2_1/ESBs_Kondensator.pdf}
+      \end{center}
+
+      Der Verlustwinkel $\delta$ ist der Winkel der Kondensatorimpedanz $\underline{Z}$ mit der imaginären Achse der gaußschen Zahlenebene (Betrag).
+
+      $$\mid \tan{\delta} \mid = \dfrac{R_{sC}}{\dfrac{1}{\omega C_s}} = R_{sC} \cdot \omega C_s$$
+
+      Somit ist die Kondensatorgüte des Reihenmodells:
+
+      $$Q_{Cs}= \frac{1}{\tan{\delta}} = \frac{1}{R_{sC} \cdot \omega C_s}$$
+
+
+    % Parallelmodell Kondensator
+    \vspace{0.02128623625220817\paperheight}
+    \begin{center}
+    \large Parallelmodell
+
+      \begin{circuitikz}
+
+        \def\innerwidth{3}
+        \def\innerheight{\innerwidth*0.3819660112501051}
+        \def\klemmlength{\innerheight*0.6180339887498948}
+
+        \draw (0,\innerheight/2)  to[R, l=$R_{pC}$] (\innerwidth,\innerheight/2);
+        \draw (0,-\innerheight/2) to[C, l_=$C_p$] (\innerwidth,-\innerheight/2);
+        \draw (-\klemmlength,\klemmlength/4) to[short, o-] (0,\klemmlength/4);
+        \draw (0,-\innerheight/2)  to[short] (0,\innerheight/2);
+        \draw (\innerwidth,-\innerheight/2)  to[short] (\innerwidth,\innerheight/2);
+        \draw (\innerwidth,\klemmlength/4) to[short, -o] (\innerwidth+\klemmlength,\klemmlength/4);
+
+      \end{circuitikz}
+    \end{center}
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_1/ESBp_Kondensator.pdf}
+    \end{center}
+
+    Der Verlustwinkel $\delta$ ist der Winkel der Kondensatoradmittanz $\underline{Y}$ mit der imaginären Achse der gaußschen Zahlenebene.
+
+    $$\tan{\delta} = \dfrac{\frac{1}{R_{pC}}}{\omega C_p} = \frac{1}{R_{pC} \cdot \omega C_p}$$
+
+    Kehrwert des Verlustfaktors:
+
+    $$ Q_{Cp} = \frac{1}{\tan{\delta}} = R_{pC} \cdot \omega C_p $$
+
+    $$ Q_{Cs} = Q_{Cp} = \frac{1}{R_{sC} \cdot \omega C_s} = R_{pC} \cdot \omega C_p $$
+
+  % 1.2
+  \subsection{}
+
+    \begin{center}
+      \begin{circuitikz}
+
+        \draw (-0.3819660112501051,0) to[R, l=$R_{s}$, o-] (1.6180339887498948,0);
+        \draw (1.6180339887498948,0) to[L, l=$L$] (1.6180339887498948*2+0.3819660112501051,0)
+        to[C, l=$C$, -o] (1.6180339887498948*3+0.3819660112501051,0);
+
+      \end{circuitikz}
+    \end{center}
+
+
+    Gleichung (4):
+      \begin{align*}
+        \underline{Z} &= R_s + j(\omega L - \frac{1}{\omega C}) \tag{4´}\label{eq:4}\\
+        &= R_s + j X\\
+        &= \mid \underline{Z} \mid \cdot e^{j \phi_{\underline{Z}}}
+      \end{align*}
+
+    Gleichung (5):
+      \begin{align*}
+        \phi_{\underline{Z}} = \text{arg}(\underline{Z}) &= \arctan{\left(\frac{\omega L - \dfrac{1}{\omega C}}{R_s}\right)}\tag{5´}\label{eq:5}\\
+        &= \arctan{\left(\frac{X}{R_s}\right)}
+      \end{align*}
+
+    Gleichung (6):
+      \begin{align*}
+        \mid \underline{Z} \mid = \sqrt{ R_s^2 + \left(\omega L - \frac{1}{\omega C}\right)^2 }\tag{6´}\label{eq:6}
+      \end{align*}
+
+    Gleichung (7):
+      \begin{align*}
+        \omega_0 = \frac{1}{\sqrt{LC}} \implies \omega_0 =\frac{1}{\sqrt{LC}} \tag{7´}\label{eq:7}
+      \end{align*}
+
+    Gleichung (8):
+      \begin{align*}
+        \underline{I} = \frac{\underline{U}}{\underline{Z}} \tag{8´}\label{eq:8}
+      \end{align*}
+
+    Gleichung (9):
+     \begin{align*}
+       \mid \underline{I} \mid &= \frac{\mid \underline{U} \mid}{\mid \underline{Z} \mid} \tag{9´}\label{eq:9}\\
+       &= \frac{\mid \underline{U} \mid}{\sqrt{R_s^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}}
+     \end{align*}
+
+    Gleichung (10):
+     \begin{align*}
+      \underline{I} = \underline{U} \cdot G_s = \frac{\underline{U}}{R_s} \tag{10´}\label{eq:10}\\
+     \end{align*}
+
+  % 1.3
+  \subsection{}
+    \subsubsection*{Reihenschwingkreis}
+
+    \begin{center}
+      \begin{circuitikz}
+
+        \draw (-0.3819660112501051,0) to[R, l=$R_{s}$, o-] (1.6180339887498948,0);
+        \draw (1.6180339887498948,0) to[L, l=$L_s$] (1.6180339887498948*2+0.3819660112501051,0)
+        to[C, l=$C_s$, -o] (1.6180339887498948*3+0.3819660112501051,0);
+
+      \end{circuitikz}
+    \end{center}
+
+    \vspace{0.013155617496424828\paperheight}
+    \begin{center}
+      \large Impedanzortskurve
+    \end{center}
+
+    $$\underline{Z} = R_s + j(\omega L_s - \frac{1}{\omega C_s})$$
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_3/SSK_Impedanz.pdf}
+    \end{center}
+
+    \begin{center}
+      \large Admittanzortskurve
+    \end{center}
+
+    $$\underline{Y} = \frac{1}{R_s + j(\omega L_s - \frac{1}{\omega C_s})}$$
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_3/SSK_Admittanz.pdf}
+    \end{center}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection*{Parallelschwingkreis}
+
+    \begin{center}
+      \begin{circuitikz}
+
+        \def\innerwidth{3}
+        \def\innerheight{\innerwidth*0.6180339887498948*1.6180339887498948}
+        \def\klemmlength{\innerheight*0.3819660112501051}
+
+
+        \draw (0,\innerheight/2)  to[R, l=$R_{p}$] (\innerwidth,\innerheight/2);
+        \draw (0,0) to[L, l=$L_p$, *-*] (\innerwidth,0);
+        \draw (0, -\innerheight/2) to[C, l=$C_p$] (\innerwidth, -\innerheight/2);
+
+        %left short
+        \draw (0, -\innerheight/2) to[short] (0, \innerheight/2);
+        %right short
+        \draw (\innerwidth, -\innerheight/2) to[short] (\innerwidth, \innerheight/2);
+
+        \draw (-\klemmlength, \klemmlength/2) to[short, o-] (0,\klemmlength/2);
+        \draw (\klemmlength+\innerwidth, \klemmlength/2) to[short, o-] (\innerwidth,\klemmlength/2);
+      \end{circuitikz}
+    \end{center}
+    \vspace{0.013155617496424828\paperheight}
+    \begin{center}
+      \large Impedanzortskurve
+      \vspace{-0.02128623625220817\paperheight}
+
+      $$\underline{Z} = \frac{1}{\frac{1}{R_p} + j (\omega C_p - \frac{1}{\omega L_p}) }$$
+
+      \begin{center}
+        \includegraphics[scale=0.3819660112501051]{./R/2_3/PSK_Impedanz.pdf}
+      \end{center}
+
+
+    \end{center}
+
+    \vspace{0.013155617496424828\paperheight}
+    \begin{center}
+      \large Admittanzortskurve
+    \end{center}
+
+    $$\underline{Y} = \frac{1}{R_p} + j (\omega C_p - \frac{1}{\omega L_p})$$
+
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_3/PSK_Admittanz.pdf}
+    \end{center}
+
+  % 1.4
+  \subsection{}
+    % circuit
+    \begin{center}
+      \begin{circuitikz}
+
+        \draw (0,0) to[R, l=$R_{sL}$] (2,0);
+        \draw (2,0) to[L, l=$L$] (4,0);
+        \draw (0,-1.6180339887498948) to[C, l=$C$] (4,-1.6180339887498948);
+
+        \draw (0,0) to[short] (0,-1.6180339887498948);
+        \draw (4,0) to[short] (4,-1.6180339887498948);
+
+        \draw (-1, -0.3819660112501051) to[short, o-] (0,-0.3819660112501051);
+        \draw (4, -0.3819660112501051) to[short, -o] (5,-0.3819660112501051);
+
+      \end{circuitikz}
+    \end{center}
+
+    \begin{align*}
+      \underline{Y} &= \frac{1}{R_{sL} + j \omega L} + j \omega C\\
+                    &= \frac{R_{sL}}{R_{sL}^2 + \omega^2 L^2} + j \omega \left (C - \frac{ L}{ R_{sL}^2 + \omega^2 L^2 } \right )
+    \end{align*}
+
+    \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/2_4/2_4_OK.pdf}
+    \end{center}
+
+      \begin{gather*}
+        \intertext{Resonanzfrequenz:}
+        \text{Im}{(\underline{Y})} = 0\\
+        \omega_0^{\text{´}} C - \frac{\omega_0^{\text{´}} L}{R_{sL}^2 + {\omega_0^{\text{´}}}^2 + L_s^2} = 0\\
+        R_{sL}^2 \cdot C + {\omega_0^{\text{´}}}^2+L^2 \cdot C^2 = L\\
+        \omega_0^{\text{´}} = \sqrt{ \underbrace{\frac{1}{LC}}_{\omega_0^2} - \frac{R_{sL}^2}{L^2} }\\
+        \boxed{\omega_0^{\text{´}} = \omega_0 \sqrt{1-\frac{R_{sL}}{\omega_0^2 \cdot L^2} } = \omega_0 \sqrt{1-\frac{1}{Q_L^2}}}
+      \end{gather*}
+
+  % 1.5
+  \subsection{}
+    $$\omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{ \sqrt{1.3 \si{\henry} \cdot 22.5 \si{\nano\farad}} } = 5834.1 \,\ \si{\second}^{-1}$$
+
+    $$\omega_0^{\text{´}} = \omega_0 \cdot \sqrt{1-\frac{R_{sL^2}}{\omega_0^2 \cdot L^2}} = 5834.1 \si{\second}^{-1} \cdot \sqrt{1-\frac{(100\si{\ohm})^2}{(5834.1 \si{\second}^{-1})^2 \cdot (1.3 \si{\henry})^2}}$$
+
+    $$\omega_0^{\text{´}} = 5833.6 \,\ \si{\second}^{-1}$$
+
+    \begin{center}
+      $\implies$ geringe Differenz $\implies$ hohe Spulengüte
+    \end{center}
+
+    Zur Berechnung von Güte und Bandbreite wird der Schwingkreis in einen idealen Parallelschwingkreis umgewandelt:
+
+    \begin{center}
+      \begin{multicols}{3}[][1in]
+        \raggedbottom
+
+          \begin{circuitikz}
+            \draw (-0.3819660112501051,0) to[R, l=$R_{sL}$, o-] (1.6180339887498948,0);
+            \draw (1.6180339887498948,0) to[L, l=$L_s$, -o] (1.6180339887498948*2+0.3819660112501051,0);
+          \end{circuitikz}
+
+        $\implies$
+
+        \begin{circuitikz}
+
+          \def\innerwidth{3}
+          \def\innerheight{\innerwidth*0.3819660112501051}
+          \def\klemmlength{\innerheight*0.6180339887498948}
+
+          \draw (0,\innerheight/2)  to[R, l=$R_{p}$] (\innerwidth,\innerheight/2);
+          \draw (0,-\innerheight/2) to[L, l=$L_p$] (\innerwidth,-\innerheight/2);
+          \draw (-\klemmlength,\klemmlength/4) to[short, o-] (0,\klemmlength/4);
+          \draw (0,-\innerheight/2)  to[short] (0,\innerheight/2);
+          \draw (\innerwidth,-\innerheight/2)  to[short] (\innerwidth,\innerheight/2);
+          \draw (\innerwidth,\klemmlength/4) to[short, -o] (\innerwidth+\klemmlength,\klemmlength/4);
+
+        \end{circuitikz}
+
+      \end{multicols}
+    \end{center}
+
+    \begin{align*}
+      \underline{Y}_s &= \underline{Y}_p\\
+      \frac{1}{R_s + j \omega_0 L_s} &= \frac{1}{R_p}-j\frac{1}{\omega_0 L_p}\\
+      %\intertext{\small Trennung in Real- und Imaginärteil zum Vergleich:}
+      \frac{R_s}{R_s^2+\omega_0^2 L_s^2}-j\frac{\omega_0 L_s}{R_s^2 L_s + \omega_0^2 L_s} &= \frac{1}{R_p}-j\frac{1}{\omega_0 L_p}
+    \end{align*}
+
+    \small Realteilvergleich:
+    \begin{gather*}
+      R_{p} = 1+\frac{\omega_0^2 L_s^2}{R_s^2} = 1 + Q_L^2
+    \end{gather*}
+    \small Imaginärteilvergleich:
+    \begin{gather*}
+      L_{p} = L_s\left( 1+ \frac{R_{s}^2}{\omega_0^2 L_s^2} \right) = 1+ \frac{1}{Q_L^2}
+    \end{gather*}
+
+    $$R_{p} = 575.3 \,\ \si{\kilo\ohm}\text{,} \,\ L_p = 1.30023 \,\ \si{\henry} \approx L_s$$
+
+  % 1.6
+  \subsection{}
+    \begin{center}
+      \large Stromspeisung
+    \end{center}
+
+    \begin{center}
+      \begin{circuitikz}
+
+        \draw (0.3819660112501051, 1.618/2) to[short] (0.3819660112501051 + 1, 1.618/2);
+        \draw (0.3819660112501051, -1.618/2) to[short] (0.3819660112501051 + 1, -1.618/2);
+
+        \draw (-1.618, -1.618/2) to[ioosource] (-1.618, 1.618/2)
+                                 to[short, -o, i=$\underline{I}_0$] (0.3819660112501051, 1.618/2);
+        \draw (-1.618, -1.618/2) to[short, -o] (0.3819660112501051, -1.618/2);
+
+        \draw (0.3819660112501051 + 1, 1.618/2) to[R, l=$\underline{Z}_{SK}$] (0.3819660112501051 + 1, -1.618/2);
+
+        \draw[draw=black] (0.3819660112501051 + 0.23606797749978964, 1.618) rectangle ++(0.3819660112501051*6, -1.618*2);
+
+        \node[draw] at (0.3819660112501051*6-0.05572809000084119, -1.618/2-0.1458980337503154) {SK};
+      \end{circuitikz}
+    \end{center}
+
+    $$\underline{U} = \underline{Z}_{SK} \cdot \underline{I}_0, \,\ \text{ $\underline{I}_0 =$ konst.} \implies \underline{U} \sim \underline{Z}_{SK}$$
+
+    \begin{center}
+      \large Spannungsspeisung
+    \end{center}
+
+    \begin{center}
+      \begin{circuitikz}
+
+        \draw (0.3819660112501051, 1.618/2) to[short] (0.3819660112501051 + 1, 1.618/2);
+        \draw (0.3819660112501051, -1.618/2) to[short] (0.3819660112501051 + 1, -1.618/2);
+
+        \draw (-1.618, 1.618/2) to[vsourcesin, v_=$\underline{U}_0$] (-1.618, -1.618/2);
+        \draw (-1.618, 1.618/2) to[short, -o] (0.3819660112501051, 1.618/2);
+        \draw (-1.618, -1.618/2) to[short, -o] (0.3819660112501051, -1.618/2);
+
+        \draw (0.3819660112501051 + 1, 1.618/2) to[R, l=$\underline{Z}_{SK}$] (0.3819660112501051 + 1, -1.618/2);
+
+        \draw[draw=black] (0.3819660112501051 + 0.23606797749978964, 1.618) rectangle ++(0.3819660112501051*6, -1.618*2);
+
+        \node[draw] at (0.3819660112501051*6-0.05572809000084119, -1.618/2-0.1458980337503154) {SK};
+      \end{circuitikz}
+    \end{center}
+
+    $$\underline{I} = \underline{U} \cdot \underline{Y}_{SK}, \,\ \text{ $\underline{U}_0 =$ konst.} \implies \underline{I} \sim \underline{Y}_{SK}$$
+
+  % 1.7
+  \subsection{}
+
+    \begin{center}
+      \large Spannungsüberhöhung\\
+      \small (Nur im Reihenschwingkreis)
+    \end{center}
+
+    \begin{center}
+      \begin{circuitikz}
+        \draw (-0.3819660112501051, 0) to[short, o-] (0,0)
+                                       to[R, l=$R_s$, v=$\underline{U}_{R_s}$] (2,0)
+                                       to[L, l=$L_s$, v=$\underline{U}_{L_s}$] (4,0)
+                                       to[C, l=$C_s$, v=$\underline{U}_{C_s}$] (6,0)
+                                       to[short, -o] (6+0.3819660112501051,0);
+      \end{circuitikz}
+    \end{center}
+
+      $R_s$:
+      \begin{gather*}
+        \underline{U}_{R_s} = \frac{\underline{U} \cdot R_s}{R_s + j\left( \omega L_s - \frac{1}{\omega C_s} \right)}
+      \end{gather*}
+      \indent $L_s$:
+      \begin{gather*}
+        \underline{U}_{L_s} = \frac{\underline{U} \cdot j \omega L_s}{ R_s + j\left( \omega L_s - \frac{1}{\omega C_s} \right)}
+      \end{gather*}
+      \indent $C_s$:
+      \begin{gather*}
+        \underline{U}_{C_s} = \frac{\underline{U}}{ j \omega C_s\left(R_s + j\left( \omega L_s - \frac{1}{\omega C_s} \right)\right)}
+      \end{gather*}
+
+      bei $\omega = \omega_0$:
+
+      \begin{align*}
+        \underline{U}_{R_s} &= \frac{\underline{U} \cdot R_s}{R_s} = \underline{U}\\
+        \underline{U}_{L_s} &= j \underline{U} \cdot \frac{ \omega_0 L_s}{R_s} = j \underline{U} \cdot Q_L\\
+        \underline{U}_{C_s} &= -j \underline{U} \cdot \frac{1}{ \omega_0 C_s R_s}
+      \end{align*}
+
+      Beträge bei $\omega_0$:
+
+      \begin{align*}
+        \hat{U}_{R_s} &= \hat{U}\\
+        \hat{U}_{L_s} &= Q_L \cdot \underline{U}\\
+        \hat{U}_{C_s} &= Q_C \cdot \underline{U}
+      \end{align*}
+
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{center}
+      \large Stromüberhöhung\\
+      \small (Nur im Parallelschwingkreis)
+    \end{center}
+
+    \begin{center}
+      \begin{circuitikz}
+        \def\innerwidth{3}
+        \def\innerheight{\innerwidth*0.6180339887498948*1.6180339887498948}
+        \def\klemmlength{\innerheight*0.3819660112501051}
+
+
+        \draw (0,\innerheight/2)  to[R, l=$R_{p}$, i=$\underline{I}_{R_p}$] (\innerwidth,\innerheight/2);
+        \draw (0,0) to[L, l=$L_p$, i=$\underline{I}_{L_p}$, *-*] (\innerwidth,0);
+        \draw (0, -\innerheight/2) to[C, l=$C_p$, i=$\underline{I}_{C_p}$] (\innerwidth, -\innerheight/2);
+
+        %left short
+        \draw (0, -\innerheight/2) to[short] (0, \innerheight/2);
+        %right short
+        \draw (\innerwidth, -\innerheight/2) to[short] (\innerwidth, \innerheight/2);
+
+        \draw (-\klemmlength, \klemmlength/2) to[short, o-] (0,\klemmlength/2);
+        \draw (\klemmlength+\innerwidth, \klemmlength/2) to[short, o-] (\innerwidth,\klemmlength/2);
+      \end{circuitikz}
+    \end{center}
+
+    $R_p$:
+    \begin{gather*}
+      \underline{I}_{R_p} = \frac{\underline{I} \cdot \frac{1}{R_p}}{\frac{1}{R_p} + j\left( \omega C_p - \frac{1}{\omega L_p} \right)}
+    \end{gather*}
+    \indent $L_p$:
+    \begin{gather*}
+      \underline{I}_{L_p} = \frac{\underline{I}}{ j \omega L_p \left(\frac{1}{R_p} + j\left( \omega C_p - \frac{1}{\omega L_p} \right)\right)}
+    \end{gather*}
+    \indent $C_p$:
+    \begin{gather*}
+      \underline{I}_{C_p} = \frac{\underline{I} \cdot j \omega C_p}{ \frac{1}{R_p} + j\left( \omega C_p - \frac{1}{\omega L_p} \right)}
+    \end{gather*}
+
+    bei $\omega = \omega_0$:
+
+    \begin{align*}
+      \underline{I}_{R_p} &= \underline{I}\\
+      \underline{I}_{L_p} &= j \underline{I} \cdot \frac{R_p}{\omega_0 L_p} = j \underline{I} \cdot Q_L\\
+      \underline{I}_{C_p} &= -j \underline{I} \cdot \omega_0 R_p C_p = j \underline{I} \cdot Q_C
+    \end{align*}
+
+    Beträge bei $\omega_0$:
+
+    \begin{align*}
+      \hat{I}_{R_p} &= \hat{I}\\
+      \hat{I}_{L_p} &= Q_L \cdot \underline{I}\\
+      \hat{I}_{C_p} &= Q_C \cdot \underline{I}
+    \end{align*}
+
+    Die Strom- bzw. Spannungsüberhöhungen betragen demnach bei Resonanz das $Q_{L/C}$-fache der Quellgrößen.
+
+  % 1.8
+  \subsection{}
+    \begin{gather*}
+      \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{0.1 \si{\henry} \cdot 100 \si{\nano\farad}}} = 10000 \,\ \si{\second}^{-1} \implies f_0 = 1.592 \,\ \si{\kilo\hertz}
+    \end{gather*}
+
+    \vspace{0.013155617496424828\paperheight}
+
+    \pagebreak
+    \begin{multicols*}{2}
+
+
+      \begin{center}
+        Spule\\
+
+          \begin{circuitikz}
+            \draw (-0.3819660112501051,0) to[R, l=$R_{sL}$, o-] (1.6180339887498948,0);
+            \draw (1.6180339887498948,0) to[L, l=$L_s$, -o] (1.6180339887498948*2+0.3819660112501051,0);
+          \end{circuitikz}
+
+        \begin{gather*}
+          Q_L = \frac{\omega_0 L_s}{R_{sL}}\\
+          R_{sL} = \frac{\omega_0 L_s}{Q_L} = 20 \,\ \si{\ohm}
+        \end{gather*}
+
+        \vspace{0.013155617496424828\paperheight}
+
+        \begin{circuitikz}
+
+          \def\innerwidth{3}
+          \def\innerheight{\innerwidth*0.3819660112501051}
+          \def\klemmlength{\innerheight*0.6180339887498948}
+
+          \draw (0,\innerheight/2)  to[R, l=$R_{pL}$] (\innerwidth,\innerheight/2);
+          \draw (0,-\innerheight/2) to[L, l=$L_p$] (\innerwidth,-\innerheight/2);
+          \draw (-\klemmlength,\klemmlength/4) to[short, o-] (0,\klemmlength/4);
+          \draw (0,-\innerheight/2)  to[short] (0,\innerheight/2);
+          \draw (\innerwidth,-\innerheight/2)  to[short] (\innerwidth,\innerheight/2);
+          \draw (\innerwidth,\klemmlength/4) to[short, -o] (\innerwidth+\klemmlength,\klemmlength/4);
+        \end{circuitikz}
+
+        \begin{gather*}
+          Q_L = \frac{R_{pL}}{\omega_0 L_p}\\
+          R_{pC} = Q_L \cdot \omega_0 L_p = 50 \,\ \si{\kilo\ohm}
+        \end{gather*}
+
+      \end{center}
+
+      \vfill\columnbreak
+      %%%%%%%%%%%%%%%%%%%%%%%
+      \begin{center}
+        Kondensator\\
+        \begin{circuitikz}
+          \draw (-0.3819660112501051,0) to[R, l=$R_{sC}$, o-] (1.6180339887498948,0);
+          \draw (1.6180339887498948,0) to[C, l=$C_s$, -o] (1.6180339887498948*2+0.3819660112501051,0);
+        \end{circuitikz}
+
+        \begin{gather*}
+          Q_C = \frac{1}{\omega_0 R_{sC} C_s}\\
+          R_{sC} = \frac{1}{\omega_0 Q_C C_s} = 3.3 \,\ \si{\ohm}
+        \end{gather*}
+
+        \vspace{0.013155617496424828\paperheight}
+
+        \begin{circuitikz}
+
+          \def\innerwidth{3}
+          \def\innerheight{\innerwidth*0.3819660112501051}
+          \def\klemmlength{\innerheight*0.6180339887498948}
+
+          \draw (0,\innerheight/2)  to[R, l=$R_{pC}$] (\innerwidth,\innerheight/2);
+          \draw (0,-\innerheight/2) to[C, l_=$C_p$] (\innerwidth,-\innerheight/2);
+          \draw (-\klemmlength,\klemmlength/4) to[short, o-] (0,\klemmlength/4);
+          \draw (0,-\innerheight/2)  to[short] (0,\innerheight/2);
+          \draw (\innerwidth,-\innerheight/2)  to[short] (\innerwidth,\innerheight/2);
+          \draw (\innerwidth,\klemmlength/4) to[short, -o] (\innerwidth+\klemmlength,\klemmlength/4);
+
+        \end{circuitikz}
+
+        \begin{gather*}
+          Q_C = \omega_0 R_{pC} C_p\\
+          R_{pC} = \frac{Q_C}{\omega_0 C_p} = 300 \,\ \si{\kilo\ohm}
+        \end{gather*}
+
+      \end{center}
+    \end{multicols*}
+
+    \begin{gather*}
+      Q_{SK} = \frac{1}{\dfrac{1}{Q_c}+\dfrac{1}{Q_L}} = \frac{Q_C \cdot Q_L}{Q_C + Q_L}\\
+      Q_{SK} = \frac{300}{7} \approx 42.86
+    \end{gather*}
+
+    \begin{gather*}
+      B_{\omega} = \frac{\omega_0}{Q_{SK}} = \frac{10000 \si{\second}^{-1}}{42.86} = 232.3 \,\ \si{\second}^{-1}\\
+      B_{f} = \frac{223.2\si{\second}^{-1}}{2\pi} = 37.14 \,\ \si{\hertz}
+    \end{gather*}
+
+    Messfrequenz:
+    $$f_0 = 1.59 \,\ \si{\kilo\hertz} \implies \text{geringere Güte} \implies B_{f} = 116.6 \,\ \si{\hertz}$$
+
+    $$Q_{\text{mess}} = \frac{f_0}{B_f} = 13.64$$
+
+    Modell:\\
+    \begin{center}
+      \begin{circuitikz}
+        \draw (-1,0) to[R, l=$R_D$, o-] (2,0)
+                    to[R, l=$R_{sL}$] (4,0)
+                    to[L, l=$L_s$] (6,0)
+                    to[R, l=$R_{sC}$] (8,0)
+                    to[C, l=$C_{s}$, -o] (10,0);
+      \end{circuitikz}
+    \end{center}
+
+    \begin{gather*}
+      B_{\omega} = \frac{R_{\text{res.}}}{L_s} \implies R_{\text{res.}} = 2 \pi \cdot B_f \cdot L_s = 73.26 \,\ \si{\ohm}\\
+      R_D = R_{\text{res.}} - R_{sC} - R_{sL} = 49.9 \,\ \si{\ohm} \approx 50 \,\ \si{\ohm}
+    \end{gather*}
+
+    % 1.9
+    \subsection{}
+      Anwendungen von Schwingkreisen:
+      \begin{itemize}
+        \item{Filter}
+        \item{Blindstromkompensation}
+      \end{itemize}
+
+
+\section{Versuchsaufgaben}
+
+  % 2.1
+  \subsection{}
+    % Please add the following required packages to your document preamble:
+    % \usepackage{booktabs}
+    \begin{table}[H]
+      \begin{center}
+      \begin{tabular}{@{}ccccc@{}}
+        \toprule
+          $C$   &    $R_{pC}$    &    $R_{sC}$    &      $Q_C$      &    $\phi_C$    \\ \midrule
+        $995.97 \,\ \si{\nano\farad}$ & $4.7278 \,\ \si{\kilo\ohm}$ & $213.42 \,\ \si{\milli\ohm}$ & $153.374233$ & $89.624 \si{\degree}$ \\ \bottomrule
+      \end{tabular}
+      \caption*{Werte des Kondensators}
+    \end{center}
+    \end{table}
+
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{@{}ccccc@{}}
+    \toprule
+    $L$   &    $R_{sL}$    &    $R_{pL}$    &      $Q_L$      &    $\phi_L$  \\ \midrule
+    $1.0263 \,\ \si{\milli\henry}$ & $1.0466 \,\ \si{\ohm}$ & $994.19 \,\ \si{\ohm}$ & $30.838$ & $88.14 \si{\degree}$ \\ \bottomrule
+    \end{tabular}
+    \caption*{Werte der Spule}
+    \end{center}
+    \end{table}
+
+
+    \begin{multicols*}{2}
+      \begin{center}
+      \small Reihenschwingkreis:
+      $$\omega_0 = 31278.1 \,\ \si{\second}^{-1}$$
+      $$Q_{RSK} = \frac{153.37 \cdot 30.838}{153.37+30.838} = 25.74$$
+      $$B_{\omega} = \frac{31278.1 \si{\second}^{-1}}{25.74} = 1215.15 \,\ \si{\second}^{-1}$$
+      \vfill\columnbreak
+      \small Parallelschwingkreis:
+      $$\omega_0 = 31278.1 \,\ \si{\second}^{-1} $$
+      $$Q_{PSK} = \frac{153.37 \cdot 30.838}{153.37+30.838} = 25.74$$
+      $$B_{\omega} = \frac{31278.1 \si{\second}^{-1}}{25.74} = 1215.15 \,\ \si{\second}^{-1}$$
+      \end{center}
+    \end{multicols*}
+
+  % 2.2
+  \subsection{}
+    \noindent (a)\\
+      \indent Für die Resonanzfrequenz wurde $f_0 = 5000 \,\ \si{\hertz}$ ermittelt. Die Grenzfrequenzen wurden zu $f_{+45} = 5200 \,\ \si{\hertz} $ und $f_{-45} = 4830 \,\ \si{\hertz}$ messtechnisch ermittelt. Zur Konstanthaltung des Stromes wurde die Spannung über $R_V = 1 \,\ \si{\ohm}$ auf $1 \,\ \si{\volt}$ eingestellt und gemessen.
+
+      \begin{table}[H]
+      \begin{center}
+        \begin{tabular}{@{}cccc@{}}
+        \toprule
+          $f \text{ in } \si{\hertz} $   &    $ U_V \text{ in } \si{\volt}$    &     $ U \text{ in } \si{\volt}$     &     $ \phi \text{ in } \si{\degree}$   \\ \midrule
+        2500 & 1.0076 & 0.0215   & 83.4   \\
+        3000 & 1.0078 & 0.02965  & 82     \\
+        3500 & 1.0075 & 0.004296 & 79.9   \\
+        4000 & 1.0212 & 0.06958  & 75.3   \\
+        4500 & 1.0572 & 0.13935  & 63.3   \\
+        4830 & 1.2505 & 0.3148   & 33.8   \\
+        5000 & 1.447  & 0.4452   & 0      \\
+        5200 & 1.2432 & 0.3148   & -36.5  \\
+        5500 & 1.0711 & 0.16457  & -61.79 \\
+        6000 & 1.0205 & 0.0878   & -75.2  \\
+        6500 & 1.0132 & 0.06084  & -80.1  \\
+        7000 & 1.0062 & 0.04674  & -82.2  \\
+        7500 & 1.0061 & 0.0384   & -84.3  \\ \bottomrule
+        \end{tabular}
+        \caption*{Messwerte aus (a)}
+      \end{center}
+      \end{table}
+
+      \pagebreak
+      \noindent (b)\\
+        \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{@{}cccc@{}}
+        \toprule
+          $f \text{ in } \si{\hertz} $   &    $ U_V \text{ in } \si{\volt}$    &     $ U \text{ in } \si{\volt}$     &     $ \phi \text{ in } \si{\degree}$   \\ \midrule
+        2500 & 1.0074 & 0.02124 & 84.5   \\
+        3000 & 1.0073 & 0.02974 & 83.6   \\
+        3500 & 1.0073 & 0.04356 & 82.9   \\
+        4000 & 1.0142 & 0.07003 & 78.4   \\
+        4500 & 1.043  & 0.14542 & 71.3   \\
+        4900 & 1.4921 & 0.5474  & 26.3   \\
+        5000 & 1.768  & 0.7742  & 0      \\
+        5160 & 1.421  & 0.5474  & -31.4  \\
+        5500 & 1.0494 & 0.1722  & -70.54 \\
+        6000 & 1.0133 & 0.0903  & -80.4  \\
+        6500 & 1.0065 & 0.0621  & -82.4  \\
+        7000 & 1.0058 & 0.0475  & -84.3  \\
+        7500 & 1.0054 & 0.0391  & -85.3  \\ \bottomrule
+        \end{tabular}
+        \caption*{Messwerte aus (b)}
+        \end{center}
+        \end{table}
+
+      \noindent (c)\\
+
+
+        \begin{figure}[H]
+          \begin{center}
+          \includegraphics[scale=0.3819660112501051]{./R/3_2/3_2_spannung.pdf}
+          \caption*{Spannungsverlauf. Blau: (a), orange: (b)}
+          \end{center}
+        \end{figure}
+
+        \begin{figure}[H]
+          \begin{center}
+          \includegraphics[scale=0.3819660112501051]{./R/3_2/3_2_phase.pdf}
+          \caption*{Phasenverlauf. Blau: (a), orange: (b)}
+          \end{center}
+        \end{figure}
+
+      \noindent (d)\\
+
+        \begin{figure}[H]
+          \begin{center}
+          \includegraphics[scale=0.3819660112501051]{./R/3_2/3_2_OK.pdf}
+          \caption*{Ortskurve der Spannung. Blau: (a), orange: (b)}
+          \end{center}
+        \end{figure}
+
+  % 2.3
+  \subsection{}
+
+
+    \begin{center}
+    Aus 3.1:\\
+    \vspace{0.013155617496424828\paperheight}
+    $f_0 = 4978.04 \,\ \si{\hertz}$\\
+    $B_f = 193.397 \,\ \si{\hertz}$\\
+    $Q = 25.74$\\
+    \vspace{0.02128623625220817\paperheight}
+    Aus 3.2:\\
+    \vspace{0.013155617496424828\paperheight}
+    $f_0 = 5000 \,\ \si{\hertz}$\\
+    $B_f = (5200 - 4830) \si{\hertz} = 370 \,\ \si{\hertz}$\\
+    $Q = 13.51$\\
+    \end{center}
+
+    Die hohe Abweichung kam hier aufgrund der ungenauen Bestimmung der Resonanzfrequenz zustande.
+
+  % 2.4
+  \subsection{}
+    Zur Konstanthaltung des Stroms wurde die Spannung über einem Widerstand von $R_V = 1 \,\ \si{\kilo\ohm}$ auf $1 \,\ \si{\volt}$ eingestellt und gemessen. Der Widerstand $R_s$ des Serienschwingkreises wurde zudem kurzgeschlossen.
+
+    \begin{table}[H]
+      \begin{center}
+        \begin{tabular}{@{}cccc@{}}
+        \toprule
+            $f \text{ in } \si{\hertz}$   &    $U_1 \text{ in } \si{\volt}$    &   $U \text{ in } \si{\milli\volt}$    &    $ ¸phi \text{ in } \si{\degree}$   \\ \midrule
+          2500 & 0.96   & 46.5  & 85.3  \\
+          3000 & 1.008  & 34.8  & 86.8  \\
+          3500 & 1.006  & 23.8  & 84.2  \\
+          4000 & 1.006  & 14.84 & 84.6  \\
+          4500 & 1.0064 & 7.35  & 83.2  \\
+          4900 & 1.0064 & 2.121 & 17    \\
+          5000 & 1.0063 & 1.5   & 0     \\
+          5160 & 1.0064 & 2.121 & -20   \\
+          5500 & 1.0072 & 5.98  & -70   \\
+          6000 & 1.007  & 11.37 & -80.5 \\
+          6500 & 1.0072 & 16.56 & -85.3 \\
+          7000 & 1.0064 & 21.5  & -86.3 \\
+          7500 & 1.0064 & 26.24 & -84.2 \\ \bottomrule
+        \end{tabular}
+        \caption*{Messwerte der Aufgabe 3.4}
+      \end{center}
+    \end{table}
+
+    \begin{figure}[H]
+      \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/3_4/3_4.pdf}
+      \caption*{ Spannungsverlauf: blau, Phasenverlauf: orange}
+      \end{center}
+    \end{figure}
+
+  % 2.5
+  \subsection{}
+    Die Spannung wurde hier konstant auf $750 \,\ \si{\milli\volt}$ gehalten. Die Werte der Reihenwiderstände $R_s$ sind $5 \si{\ohm}$ und $10 \si{\ohm}$.\\
+
+    \begin{table}[H]
+      \begin{center}
+        \begin{tabular}{@{}ccc@{}}
+        \toprule
+          $f \text{ in } \si{\hertz}$   &   $U_L \text{ in } \si{\volt}$     &  $U_C \text{ in } \si{\volt}$      \\ \midrule
+        2500 & 0.2485 & 0.9954 \\
+        3000 & 0.4194 & 1.1611 \\
+        3500 & 0.715  & 1.457  \\
+        4000 & 1.27   & 1.968  \\
+        4500 & 2.537  & 3.068  \\
+        4900 & 3.794  & 3.851  \\
+        5000 & 3.817  & 3.722  \\
+        5160 & 3.609  & 3.309  \\
+        5500 & 2.859  & 2.321  \\
+        6000 & 2.097  & 1.444  \\
+        6500 & 1.692  & 0.9916 \\
+        7000 & 1.454  & 0.7376 \\
+        7500 & 1.301  & 0.5774 \\ \bottomrule
+        \end{tabular}
+      \caption*{Messwerte für $R_s=5 \,\ \si{\ohm}$}
+    \end{center}
+    \end{table}
+
+    \begin{table}[H]
+      \begin{center}
+      \begin{tabular}{@{}ccc@{}}
+      \toprule
+         $f \text{ in } \si{\hertz}$   &   $U_L \text{ in } \si{\volt}$     &  $U_C \text{ in } \si{\volt}$      \\ \midrule
+        2500 & 0.2432 & 0.9744 \\
+        3000 & 0.4048 & 1.1211 \\
+        3500 & 0.6607 & 1.349  \\
+        4000 & 1.0844 & 1.682  \\
+        4500 & 1.71   & 2.085  \\
+        4900 & 2.113  & 2.169  \\
+        5000 & 2.16   & 2.129  \\
+        5160 & 2.172  & 2.012  \\
+        5500 & 2.039  & 1.667  \\
+        6000 & 1.743  & 1.206  \\
+        6500 & 1.51   & 0.8865 \\
+        7000 & 1.355  & 0.6886 \\
+        7500 & 1.234  & 0.5481 \\ \bottomrule
+      \end{tabular}
+      \caption*{Messwerte für $R_s=10 \,\ \si{\ohm}$}
+    \end{center}
+    \end{table}
+
+    \begin{figure}[H]
+      \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/3_5/3_5_UL.pdf}
+      \caption*{ $U_L$. Blau: $R_s = 5 \,\ \si{\ohm}$, orange: $R_s = 10 \,\ \si{\ohm}$}
+      \end{center}
+    \end{figure}
+
+    \begin{figure}[H]
+      \begin{center}
+      \includegraphics[scale=0.3819660112501051]{./R/3_5/3_5_UC.pdf}
+      \caption*{ $U_C$. Blau: $R_s = 5 \,\ \si{\ohm}$, orange: $R_s = 10 \,\ \si{\ohm}$}
+      \end{center}
+    \end{figure}
+
+
+\end{document}

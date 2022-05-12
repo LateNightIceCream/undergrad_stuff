@@ -1,0 +1,80 @@
+%-------------------------------------------------------------------------------
+\subsection{RFC 1918}
+
+Der RFC (Request for Comments) 1918: \emph{Address Allocation for private
+ Internets} definiert die IP-Adresszuweisung für den privaten Adressbereich.
+Dies erlaubt zwei Hosts gleiche IP-Adressen zu besitzen, sofern diese voneinander
+isoliert sind (private Netzwerke). Zwischen beiden privaten Netzwerken stehen
+dann die NAT/PAT-Devices, welche für die Übersetzung in den öffentlichen
+Adressbereich und zurück sorgen.\\
+
+Entscheidendes Kriterium ist, dass IP-Adressen, die aus dem, nach RFC 1918
+definierten, privaten Adressbereich stammen auch nur in internen, privaten
+Netzwerken laufen können. Das bedeutet, dass Hosts mit privaten IP-Adressen
+nicht aus dem Internet erreicht werden können.\\
+
+Es gibt 3 verschiedene Adressbereiche, welche unterschiedliche Anzahlen an Bits,
+ausgehend von einer Grundadresse, für den privaten Bereich reservieren (vgl.
+Netzklassen) (nicht zu verwechseln mit Subnetting).
+
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{llll}
+\rowcolor{teal-0}
+Adressbereich                 & Blockgröße & CIDR Kennz.    & Anzahl\\
+10.0.0.0 - 10.255.255.255     & 24 bit     & 10.0.0.0/8     & 16777216\\
+172.16.0.0 - 172.31.255.255   & 20 bit     & 176.16.0.0/12  & 1058576\\
+192.168.0.0 - 192.168.255.255 & 16 bit     & 192.168.0.0/16 & 65536
+\end{tabular}
+ \end{center}
+\caption{RFC 1918 private Adresszuweisungen}
+\end{table}
+
+Die restlichen $2^{32}-2^{24}-2^{20}-2^{16} = 4.277.075.968$ Adressen für den
+öffentlichen Bereich werden von der \textsc{IANA} (Internet Assigned Numbers
+Authority) verwaltet.
+
+%-------------------------------------------------------------------------------
+\subsection{Anzahl intern local auf intern global}
+PAT weist jeder TCP oder UDP Kommunikation eine einzigartige Quellportnummer zu,
+was die Abbildung der Adressen mehrerer lokaler (insidel local) Geräte auf
+eine einzige öffentliche (inside global) Adresse ermöglicht.\\
+
+Da der Port eine 16-bit Zahl ist und somit maximal den Wert 65535 haben kann,
+ist die maximale Anzahl dieser Zuweisungen auf eine einzige inside global IP
+durch die Portnummer limitiert.\\
+
+Hinzu kommt, dass ein Host-Gerät (einzelne inside local IP) durchaus
+gleichzeitig mehrere Verbindungen mit unterschiedlichen Quellports herstellen
+kann (z.B. Browser bei Öffnen einer Website). Dadurch wird die Anzahl der
+mit NAT verwalteten Geräte limitiert.
+
+%-------------------------------------------------------------------------------
+\subsection{Vor- und Nachteile von NAT / PAT}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{|X|X|}
+  \textbf{Vorteile} & \textbf{Nachteile}\\
+  \hline
+  $\rightarrow$ Mehrere Hosts auf eine IP-Adresse zuordenbar, dadurch werden IPv4 Adressen gespart & $\rightarrow$ Erhöhter technischer Aufwand / zusätzlicher Schritt der Übersetzung notwendig\\
+  $\rightarrow$ Anonymisierung der Hosts gegenüber der outside global/local Seite &$\rightarrow$ Begrenzter Speicher des NAT-Gerätes bei hoher Anzahl an Übersetzungseinträgen\\
+  $\rightarrow$ Höhere Flexibilität und Übersichtlichkeit im Network-Design & $\rightarrow$ Komplikationen bei VPN\\
+  & $\rightarrow$ Router sollte eigentlich nicht auf Ebene 4 (Portnummern) agieren
+\end{tabularx}
+\end{table}
+
+%-------------------------------------------------------------------------------
+\subsection{Unterscheidungsmerkmale am NAT-Device}
+Die Unterscheidungsmerkmale sind:
+
+\[\{\text{Quell-IP, Quell-Port, Ziel-IP, Ziel-Port, Protokoll}\}\]\\
+
+Das NAT-Device (i.d.R. Router) führt eine Tabelle über bestehende Verbindungen
+und den zugehörigen Adress- und Portübersetzungen.\\
+
+Ein Sonderfall bildet das ICMP-Protokoll (z.B. bei ping-Befehl), da es auf
+Ebene 3 arbeitet und daher keine Portnummern verwendet. Dieser Fall wird im RFC
+5508 definiert. Für ICMP-Anfrage und -Antwort Nachrichten (query/reply) legt
+das NAT-Gerät, ähnlich wie bei PAT, eine Query-ID an, die den jeweiligen Host
+identifiziert.\\
+

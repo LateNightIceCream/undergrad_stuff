@@ -1,0 +1,80 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'topo.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{407.09473091bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.49715817)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{topo.pdf}}%
+    \put(0.82612067,0.0343015){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Client\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{topo.pdf}}%
+    \put(0.78766004,0.26043733){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gateway / Router\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{topo.pdf}}%
+    \put(0.69750117,0.39678493){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ISP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{topo.pdf}}%
+    \put(0.81107799,0.35384667){\color[rgb]{0.87058824,0.88627451,0.90196078}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}IPv6\end{tabular}}}}%
+    \put(0.0676286,0.03751648){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Server\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{topo.pdf}}%
+    \put(0.09742576,0.26043738){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gateway / Router\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{topo.pdf}}%
+    \put(0.36220353,0.39678493){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ISP\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{topo.pdf}}%
+    \put(0.23600028,0.35384667){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}IPv4\end{tabular}}}}%
+    \put(-0.00203184,0.00964002){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(z.B. echotcpsrv.c)\end{tabular}}}}%
+    \put(0.76606299,0.00521153){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(z.B. echotcpcli.c)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{topo.pdf}}%
+    \put(0.42565208,0.15882336){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Port-Forwarding\end{tabular}}}}%
+    \put(0.17287812,0.10884995){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Firewall\end{tabular}}}}%
+    \put(0.50543572,0.44111738){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Internet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{topo.pdf}}%
+    \put(0.36812896,0.47889804){\color[rgb]{0.98039216,0.32156863,0.32156863}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}IPv4\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

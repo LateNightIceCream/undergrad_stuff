@@ -1,0 +1,244 @@
+\documentclass[11pt, a4paper]{article}
+
+\input{"/home/zamza/Documents/HS/Notes Template/preamble.tex"}
+
+\begin{document}
+
+\includepdf{./titlepage/titlepage.pdf}
+
+\section{Vorbereitungsaufgaben}
+
+\subsection{OSI-Referenzmodell}
+\input{Vorbereitungsaufgaben/1_OSI.tex}
+
+\subsection{Netztopologien}
+\input{Vorbereitungsaufgaben/2_Topologien.tex}
+
+\pagebreak
+\subsection{Unterschiede zwischen Ethernet und Token Ring}
+\input{Vorbereitungsaufgaben/3_Ethernet_Tokenring.tex}
+
+\subsection{Ethernetzugriffsverfahren}\label{A4.4}
+\input{Vorbereitungsaufgaben/4_Ethernetzugriff.tex}
+
+\subsection{Ablauf einer HTTP-Verbindung}
+\subsubsection{Allgemein}\label{three_way}
+Am Beginn einer HTTP-Verbinung steht der Verbindungsaufbau über das TCP-Protokoll und den sogenannten \emph{three-way-handshake}.
+\begin{description}
+\item[Schritt 1: SYN] Der Client schickt ein TCP-Paket mit gesetztem SYN-Flag, um eine Verbindung mit dem Empfänger zu initialisieren und seine Sequenznummer für die Nummerierung der Pakete anzugeben.
+\item[Schritt 2: SYN-ACK] Der Server antwortet auf Schritt 1 zum einen mit einem ACK, um das Paket (SYN) zu bestätigen und zum anderen mit einem SYN, um seine eigene Sequenznummer anzugeben.
+\item[Schritt 3: ACK] Der Client bestätigt das SYN des Servers mit einem ACK.
+\end{description}
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{\import{graphics/}{three_way.pdf_tex}}
+\end{figure}
+
+\subsubsection{OSI}
+Die Daten, die an den Server übertragen werden sollen und aus den Anwendungsschichten (7-5) stammen, werden in der Transportschicht (Schicht 4) segmentiert. Jedem Segment wird dann ein 20 bis 60 Byte langer TCP-Header angebracht, welcher u.a. Quell- und Zielport definiert. Der Zielport aus Client-Sicht ist hier der Standard HTTP-Port 80. \\
+
+Das Resultat aus Schicht 4 ist dann ein Segment mit TCP-Header, das als Payload für die folgende Schicht 3 (Netzwerkschicht) in einen 20 bis 60 Byte langen IP-Header gebracht wird. Dieser gibt die eindeutigen Quell- und Ziel-IP-Adressen, sowie weitere Optionsfelder (z.B. time to live) an.\\
+
+Das IP-\emph{Paket} gelangt in Schicht 2, wo es zu einem Ethernet-\emph{Frame} wird. Der Ethernet Header enthält u.a. die ebenfalls einzigartigen MAC-Quell- und Zieladressen (6 Byte) sowie weitere Felder (siehe \ref{A4.6}).\\
+
+Sowohl MAC- als auch IP-Adressen werden benötigt. Die MAC-Adressen geben den nächsten Sprung (\emph{hop}) zur folgenden Hardware (z.B. den nächsten Router) an, während die IP-Adressen die Endsysteme eindeutig identifiziert.\\
+
+\subsection{Ethernetframes}\label{A4.6}
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{\import{graphics/}{ethernetframe.pdf_tex}}
+\end{figure}
+
+Der Ethernetframe enthält Ziel- und Quell-MAC-Adresse sowie das Feld \emph{Ethertype / Länge}, die Nutzdaten (z.B. IP-Paket) und eine Frame Check Sequence (FCS).\\
+
+\subsubsection{MAC-Adressen}
+Die MAC-Adressen werden von der Schicht 2 verwendet, um Ziel- und Quell-Netzwerkschnittstellen (NICs) zu identifizieren.
+
+\subsubsection{Ethertype / Länge}
+Das Ethertype-Feld gibt die Protokollart der Daten im Nutzdatenfeld an, sofern dessen Wert größer gleich 1536 ist. Ist der Wert kleiner gleich 1500, wird damit die Länge der Daten spezifiziert.
+
+\subsubsection{Frame Check Sequence (FCS)}
+Die Frame Check Sequence ist ein 4-Byte Cyclic Redundancy Check (CRC), der zur Fehlererkennung beim Empfänger genutzt werden kann. Der Wert dieses Feldes errechnet sich aus den Werten der anderen Felder.
+
+
+\subsection{Internetprotokollapplikationen}
+Einige Beispiele für Internetprotokollapplikationen und deren Format.
+
+\subsubsection{DNS}
+
+\begin{figure}[H]
+\centering
+\resizebox{0.618\textwidth}{!}{\import{graphics/}{actually_dns_format.pdf_tex}}
+\end{figure}
+
+\subsubsection{HTTP}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.618\textwidth]{graphics/http}
+\end{figure}
+
+\subsubsection{SSH}
+\begin{figure}[H]
+\centering
+\resizebox{0.618\textwidth}{!}{\import{graphics/}{dns_format.pdf_tex}}
+\end{figure}
+
+\subsection{WIN-Kommandos}
+\begin{description}
+\item[ARP-Tabelle:]\begin{itemize}
+                      \item arp -a (Tabelle anzeigen)
+                      \item arp -d pc3 (Eintrag löschen)
+                      \item arp -s pc3 0:0:c:e:12:37 (Eintrag hinzufügen)
+                    \end{itemize}
+\item[Routing Tabelle:] netstat -r
+\item[Netzwerkinformationen:] ipconfig
+\item[ping:] ping 8.8.8.8
+\item[Weg eines Datenpaketes:] tracert
+\end{description}
+
+\subsection{Uni-, Multi-, Broadcast}\label{A4.9}
+\begin{description}
+        \item[Unicast:] Eine Nachricht wird an einen \emph{einzelnen Empfänger} gesendet
+        \item[Multicast:] Eine Nachricht wird an eine ausgewählte \emph{Gruppe von Empfängern} gesendet (Vorteil: geringere Datenübertragungsrate notwendig, geringere Belastung des Mediums. Z.B. bei IP einstellbar über Adresse)
+        \item[Broadcast:] Eine Nachricht wird an \emph{alle Teilnehmer} des Netzwerkes gesendet (sollte sich auf das eigende Netzsegment beschränken, d.h. nicht durch router weitergeroutet werden)
+\end{description}
+
+\pagebreak
+\section{Versuchsaufgaben}
+\subsection{Kennenlernen des Software-Analysators}
+\input{Versuchsaufgaben/3_1.tex}
+
+\subsection{Testen der Netzwerkkonfiguration}
+\input{Versuchsaufgaben/3_2.tex}
+
+\subsection{Frameanalyse (Ethernet)}
+\input{Versuchsaufgaben/3_3.tex}
+
+\subsection{Analyse der Internetsitzungen}
+\input{Versuchsaufgaben/3_4.tex}
+Im ersten Schritt wurden ARP- und DNS-Cache geleert, um entsprechende Anfragen in Wireshark sehen zu können.\\
+
+Es wurden dann folgende Web-Seiten im \emph{Mozilla Firefox} Browser nacheinander aufgerufen:
+\begin{center}
+  \underline{acad-30.na.hs-wismar.de}\\
+  sowie\\
+  \underline{hermes.fiw.hs-wismar.de/comlab}
+\end{center}
+
+Währenddessen wurde mithilfe von Wireshark die Netzwerkkommunikation mitgeschnitten. Abb. \ref{wire_34} zeigt einen Ausschnitt aus der Tracedatei, für die Übersicht wurde der Filter \inlinecode{tcp || http || dns}  angewandt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/trace_screenshot}
+  \caption{Screenshot des Beginns des Wireshark-Mitschnittes, acad-30.na.hs-wismar.de (gefiltert)}\label{wire_34}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/wire_34_hermes}
+  \caption{Screenshot des Beginns der Kommunikation mit hermes.fiw.hs-wismar.de (gefiltert)}\label{wire_34_hermes}
+\end{figure}
+
+\subsubsection{DNS-Anfragen}
+Das DNS-Protokoll (Domain Name Service) ist ein Protokoll auf Anwendungsebene, das dafür zuständig ist, den jeweiligen Doimainnamen (z.B. acad-30.na.hs-wismar.de) in dessen IP-Adresse umzuwandeln. Ist diese Zuweisung nicht bereits im Zwischenspeicher vorhanden, muss der Client eine DNS-Anfrage an einen DNS-Server stellen. Dies passiert auch am Beginn der Kommunikatio, da der DNS-Cache im Vornherein gelöscht wurde (Abb. \ref{wire_34}).\\
+
+Der Host \inlinecode{192.168.50.21}, auf dem der Name der Website in die Browserleiste eingegeben wurde, stellt eine Anfrage an den Server \emph{statler.hs-wismar.de} (\inlinecode{192.76.157.4}). Dieser befindet sich nicht im gleichen Subnetz, weshalb die Kommunikation über den Standardgateway (\inlinecode{192.168.50.1}) laufen muss, was auch durch das überprüfen der Ziel-MAC-Adresse im Ethernetframe zu erkennen ist.\\
+
+Es sind keine weiteren ARP-Anfragen von der sendenden Schnittstelle notwendig, da die Hardwareadresse des Standardgateways anscheinend bekannt ist und weitere Hardwareadressauflösungen von den folgenden Netzwerkknoten gehandhabt werden.\\
+
+Die DNS-Anfrage läuft über Ebene 4 mit dem verbindungslosen UDP-Protokoll zu Port 53 und enthält u.a. den ASCII-codierten Namen der Website, sowie bestimmte Flags, wie z.B. das Opcode-Flag 0 zur Signalisierung einer Anfrage (Abb. \ref{dns_request_acad}). Da es verbindungslos ist, sieht man beispielsweise auch keine Bestätigungsantworten (ACK), wie man es bei TCP erwarten würde.\\
+
+Als Separator zwischen den URN-Bestandteilen ist in den eigentlichen Daten nicht der Punkt (wie man es im Browser eingibt), sondern der Hex-Wert \emph{02}, welcher im ASCII-Code für STX (Start of Text) steht (Abb. \ref{dns_request_acad} unten).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/dns_request}
+  \caption{Erste DNS-Anfrage über acad-30.na.hs-wismar.de}\label{dns_request_acad}
+\end{figure}
+
+Es folgt in der nächsten Zeile eine weitere, parallele DNS-Anfrage an einen anderen Server (kermit.hs-wismar.de / \inlinecode{192.76.157.9}) zur Auflösung desselben Namens (acad-30.na.hs-wismar.de). Das geschieht möglicherweise, um im Fehlerfall des \glqq statler\grqq\ Servers trotzdem eine DNS-Auflösung zu erhalten.\\
+
+Die Antwort auf die erste Anfrage erscheint nach etwa $38 \, \si{\milli\second}$. Sie enthält, wie erwartet, die zum Namen gehörende IP-Adresse \inlinecode{212.201.38.160}. Die Flags geben hier an, dass es sich um eine Standard-Antwort handelt und dass es keine Fehler gab (Abb. \ref{dns_reply_acad}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/dns_reply}
+  \caption{Erste DNS-Antwort über acad-30.na.hs-wismar.de}\label{dns_reply_acad}
+\end{figure}
+
+\subsubsection{HTTP- und TCP-Verkehr}
+Nach der Antwort wird die TCP-Kommunikation mit dem nun bekannten acad-30.hs-wismar.de auf Port 80 (HTTP) initiiert. Dies geschieht über den 3-Wege-Handshake (siehe \ref{three_way}). Der Sender legt einen zufälligen Port zur Identifizierung der Verbindung fest, welcher über dem sogenannten \glqq well known ports\grqq-Bereich (1024) liegt und kleiner als 65535 ist, in diesem Fall 56682.\\
+
+Dann wird ein TCP-Paket mit gesetzem SYN-Bit (Synchronisation) an den Server geschickt, um diesem die eigene Sequenznummer (3291467299) für die Paketnummerierung, die Fenstergröße ($64240$) zur Flusskontrolle, sowie die maximale Segmentgröße (Datengröße) mitzuteilen. In Wireshark kann man für TCP-Streams relative Sequenznummern einstellen, wodurch die Nummerierung automatisch bei 0 beginnt (so auch in Abb. \ref{tcp_syn}). Außerdem wird während des Handshakes der Skalierungsfaktor für die Fenstergröße festgelegt. Dessen TCP-Feld ist 8, was einen Faktor von $2^{8} = 256 bedeutet$.\\
+
+Kurz danach öffnet der Client einen weiteren Port (56684) für die TCP-Kommunikation mit dem gleichen Server auf Port 80. Er fährt dabei genauso vor wie bei der vorherigen Initiierung. Die parallelen Verbindungen werden dann genutzt, um jeweils verschiedene Ressourcen vom Server \glqq gleichzeitig\grqq\ anzufragen (z.B. HTML, Bilder etc.).\\
+
+Auf die erste SYN-Anfrage antwortet der Server in gleicher Weise mit einem TCP-Paket, in welchem das SYN-Bit sowie nun auch das ACK-Bit zur Bestätigung gesetzt sind. Der Server teilt dem Client ebenfalls seine Windowgröße ($65535 \cdot 1$), Sequenznummer (167188764) und maximale Segmentgröße (1380) mit und richtet sie an Port 56682.\\
+
+Dazwischen erscheint noch die Antwort auf die zweite DNS-Anfrage von kermit.hs-wismar.de, welche wahrscheinlich ignoriert wird, da die Auflösung bereits bekannt ist.\\
+
+Im dritten Schritt des three-way-handshakes erhält der Server vom Client ein ACK, um den Empfang des vorherigen TCP-Paketes zu bestätigen (Abb. \ref{tcp_ack}). Hierin ist die Sequenznummer auf 1 gesetzt, um zu kennzeichnen, dass das nächste Paket, das empfangen werden kann die (relative) Sequenznummer 1 besitzt. Man erkennt außerdem, dass die Fenstergröße nur 512 Byte beträgt. Da im Handshake allerdings der Fensterskalierungsfaktor 256 festgelegt wurde, ist die tatsächliche Fenstergröße $131072$, was auch im durch Wireshark hinzugefügten Feld [Calculated window size] zu sehen ist.\\
+
+Der andere TCP-Handshake auf Client-Port 56684 verläuft analog.\\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/tcp_syn}
+  \caption{Erstes TCP-Paket für Three-Way-Handshake mit SYN-Bit}\label{tcp_syn}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/tcp_ack}
+  \caption{Beenden des Three-Way-Handshakes mit ACK}\label{tcp_ack}
+\end{figure}
+
+Vor der ersten HTTP-Anfrage erscheinen noch drei DNS-Anfragen zur Auflösung der Namen \glqq 160.38.201.212.ip.00.s.sophosxl.net\grqq\ sowie \glqq npnq-30.an.uf-jvfzne.qr.m.00.s.sophosxl.net\grqq\ an den Server \inlinecode{192.76.157.4}, welche jedoch, wie in der DNS-Antwort bei Nummern 30-32 zu sehen, von diesem nicht aufgelöst werden können.\\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/http_request}
+  \caption{HTML-Anfrage}\label{http_request}
+\end{figure}
+
+Es folgt die HTTP-Anfrage zum Grundverzeichnis der Website \glqq /\grqq\ . Diese enthält u.a. Informationen über Sprache, Kodierung, Browser und Plattform. Sie wird vom Server sofort zusammen mit den ersten Daten bestätigt. Da die maximale Segmentgröße (MSS) beim Handshake zu 1380 Byte festgelegt wurde, können die Daten nicht als ein einziges Segment verschickt werden, sondern müssen in maximal dieser Größe segmentiert sein. In Abb. \ref{wire_34} ab Paket 23 erkennt man dieses Verhalten. Zuerst werden Daten der Länge 84, dann Daten der Länge 1380 übertragen, also insgesamt 1467 Byte. Dies überschreitet zwar noch nicht die festgelegte Fenstergröße, allerdings ist das nur die maximale Grenze und nach Konvention wird jedes zweite (oder spätere) Paket bereits mit einem ACK bestätigt, wie bei Paket 25 zu sehen. Wireshark kennzeichnet TCP Segmente, die zu größeren, zusammenhängenden Daten gehören außerdem als [TCP segment of a reassembled PDU].\\
+
+Der HTML-Status \glqq 200 OK\grqq\ wird dann gesendet, um eine erfolgreiche Anfrage zu signalisieren. Der Client bestätigt folglich noch das Empfangen der Daten.\\
+
+Auf diese Weise wurde eine 4715 Byte große HTML-Datei übertragen, welche der Browser dann darstellen kann. Diese kann man auch erkennen, wenn man sich die (zusammengesetzten) Daten der Pakete anschaut.\\
+
+Von der Server-Seite wird mit dem letzen HTTP-Paket mittels [FIN, ACK] das Kommunikationsende auf dem Port 80/56682 angefragt, was dann vom Client mit einem [FIN, ACK] bestätigt wird, worauf der Server erneut mit einem ACK antwortet.\\
+
+Später wird noch eine Datei \emph{h\_logo.gif}, also eine Bilddatei im GIF-Format, angefragt und auch übertragen (Abb. \ref{gif_data}). Man kann die gesendeten Daten mit Wireshark extrahieren und wieder zusammensetzen. Dazu geht man auf File $\rightarrow$ Export Objects $\rightarrow$ HTTP und wählt die entsprechende Datei aus. Das Ergebnis ist in Abb. \ref{hlogo} zu sehen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/gif_data}
+  \caption{Ausschnitt aus dem HTTP-Paket für die Datei h\_logo.gif}\label{gif_data}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/versuch/3_4/wireshark/h_logo}
+  \caption{Entnommene GIF-Datei}\label{hlogo}
+\end{figure}
+
+\subsubsection{Flussdiagramm der Sitzungen}
+Da die Kommunikation aus vielen HTTP-Anfragen besteht, wurden in den Flussdiagrammen jeweils nur die DNS-Anfragen und die ersten TCP-Verbindungen bis zu deren Ende (FIN) dargestellt. Außerdem wurden nur die \glqq höchsten\grqq\ Protokolle in den jeweiligen Paketen gekennzeichnet (z.B. HTTP, obwohl es natürlich in einem TCP Paket eingebettet ist).
+
+\begin{figure}[H]
+\centering
+\resizebox{0.618\textwidth}{!}{\import{graphics/}{acad_flowchart.pdf_tex}}
+\caption{Flussdiagramm der Verbindung mit acad-30.na.hs-wismar.de}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\resizebox{0.618\textwidth}{!}{\import{graphics/}{hermes_flowchart.pdf_tex}}
+\caption{Flussdiagramm der Verbindung mit hermes.fiw.hs-wismar.de}
+\end{figure}
+
+\end{document}
