@@ -1,0 +1,66 @@
+\subsection{RS-Flipflop (statisch)}
+
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccc}
+      \rowcolor{gray0} 
+      $S$ & $R$ & $Q$                \\
+      0   & 0   & vorheriger Zustand \\
+      0   & 1   & 0                  \\
+      1   & 0   & 1                  \\
+      1   & 1   & nicht definiert   
+    \end{tabular}
+  \end{center}
+  \caption{Wahrheitstabelle RS-Flipflop (statisch, NOR-Gatter)}
+\end{table}
+
+\subsection{RS-Flipflop (taktzustandsgesteuert)}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cccc}
+      \rowcolor{gray0} 
+      $C$ & $S$ & $R$ & $Q$                \\
+      0   & X   & X   & vorheriger Zustand \\ \hline
+      1   & 0   & 0   & vorheriger Zustand \\
+      1   & 0   & 1   & 0                  \\
+      1   & 1   & 0   & 1                  \\
+      1   & 1   & 1   & nicht definiert   
+    \end{tabular}
+  \end{center}
+  \caption{Wahrheitstabelle RS-Flipflop (taktzustandsgesteuert, NOR-Gatter)}
+\end{table}
+
+\subsection{RS-Flipflop (taktflankengesteuert)}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{cccc}
+      \rowcolor{gray0} 
+      $C$ & $S$ & $R$ & $Q$                \\
+      X   & 0   & 0   & vorheriger Zustand \\ \hline
+      $\uparrow$   & 0   & 0   & vorheriger Zustand \\
+      $\uparrow$   & 0   & 1   & 0                  \\
+      $\uparrow$   & 1   & 0   & 1                  \\
+      $\uparrow$   & 1   & 1   & nicht definiert   
+    \end{tabular}
+  \end{center}
+  \caption{Wahrheitstabelle RS-Flipflop (taktflankengesteuert, NOR-Gatter)}
+\end{table}
+
+\subsection{D-Flipflop (transparent)}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{ccc}
+      \rowcolor{gray0} 
+      $C$ & $D$                       & $Q$                       \\
+      0   & 0                         & vorheriger Zustand        \\
+      0   & 1                         & vorheriger Zustand        \\
+      1   & 0 & 0 \\
+      1   & 1 & 1
+    \end{tabular}
+  \end{center}
+  \caption{Wahrheitstabelle D-Flipflop (NOR-Gatter)}
+\end{table}
+
+\subsection{JK-Flipflop (taktflankengesteuert)}
+
+\subsection{JK-Master-Slave-Flipflop}

@@ -1,0 +1,22 @@
+Schalterprellen oder auch Kontaktprellen bezeichnet den Effekt des mehrfachen
+Öffnens bzw. Schließens bei einmaligem Auslösen eines mechanischen
+Schalters/Tasters, ausgelöst durch die Federeigenschaften der Kontaktmetalle.
+
+In Logikschaltkreisen stellt es ein Problem dar, da es den im Tasterdruck codierten
+Logikzustand (HIGH oder LOW) durch eine schnelle Folge von wechselnden Zuständen
+vor dem eigentlich gewollten Zustand behindert.
+
+Um die Auswirkungen zu verhindern und möglichst eindeutige Zustände zu erhalten,
+kann man Entprellmaßnahmen einführen. Eine Möglichkeit ist eine
+Monoflopschaltung, die durch den Taster ausgelöst wird. Dadurch wird beim ersten
+erkannten Zustandswechsel des Tasters für eine durch die Schaltung definierte
+Zeit der entsprechende Zustand am Ausgang des Monoflops durchgeschalten wodurch
+weitere, folgende Prellimpulse keine Auswirkungen auf den Ausgangszustand haben.
+
+Weitere Möglichkeiten sind:
+\begin{itemize}
+\item SR-Flip-Flop (SPDT-Schalter)
+\item RC-Tiefpass (+Schmitt-Trigger)
+\item Softwarelösungen, z.B. bei Microcontrollern
+\end{itemize}
+

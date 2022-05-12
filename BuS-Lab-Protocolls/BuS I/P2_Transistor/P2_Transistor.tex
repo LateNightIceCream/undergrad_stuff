@@ -1,0 +1,254 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble}
+
+\setlength\columnsep{0.145898\paperwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \includepdf{./titlepage/titlepage1.pdf}
+  \clearpage
+  \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vorbereitungsaufgaben}
+
+\subsection{Aufbau und Wirkungsweise des BPT}
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_1/npn}
+\end{center}
+
+Bipolartransistoren können durch Verkettung von insgesamt 3
+dotierten Halbleiterkristallen (vgl. Diode), jeweils entweder p- oder
+n-leitend, realisiert werden, woraus sich die beiden Kombinationsarten
+\textit{npn} und \textit{pnp} ergeben.
+
+\noindent Die 3 Regionen bezeichnet man als
+\begin{itemize}
+\item Emitter (E)
+\item Basis (B)
+\item Kollektor (C)
+\end{itemize}
+
+welche in der
+Regel unterschiedliche Dotierungskonzentrationen aufweisen. So ist der Emitter
+höher als die Basis und die Basis höher als der Kollektor dotiert.
+
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_1/npn_voltage}
+\end{center}
+
+Legt man von außen eine Spannung $U_\textrm{BE}$ an den Basis-Emitter-Übergang
+des Transistors, sodass er in Durchlassrichtung geschaltet
+ist\footnote{$U_{\textrm{BE}}>U_\textrm{D}$, $U_\textrm{D}:$ Diffusionsspannung
+  ($0.7 \,\ \si{\volt}$)}, so wird dieser leitend und lässt einen (kleinen) Basisstrom
+$I_B$ fließen. Da der Emitter deutlich höher dotiert ist als die Basis,
+überwiegt beim Basisstrom der Majoritätsträgerstrom der Elektronen vom Emitter in
+die Basis (gegenüber
+dem Strom der Defektelektronen von der Basis in den Emitter).
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_1/npn_voltage_both}
+\end{center}
+
+Legt man nun eine zusätzliche Spannung $U_\textrm{CE}$ an die
+Kollektor-Emitter-Strecke, gelingt ein deutlich höherer Diffusionsstrom $I_\textrm{C}$ (im
+Vergleich zum Basisstrom) durch den hohen Dotierungskonzentrationsunterschied
+zwischen Emitter und Kollektor; Die Elektronen des Emitters diffundieren durch
+die Basis in den
+Kollektor. Um Rekombinationen der Emitterelektronen mit den Fehlstellen in der Basis
+zu vermeiden, sollte die Basis eine geringe Weite besitzen.
+
+Ein mathematisches Modell zur Beschreibung des Bipolartransistors bietet das \emph{Ebers-Moll-Modell}.
+
+\begin{center}
+\begin{circuitikz}
+  \draw (-1,0) to [short, o-, i<=$I_E$] (0,0);
+  \draw (2,0) to [diode, v=$I_{ED}$] (0,0);
+  \draw (2,0) to [diode, v^=$I_{CD}$] (4,0);
+  \draw (4,0) to [short, -o, i<=$I_C$] (5,0);
+  \draw (1.5,0) to [short] (2.5,0);
+  \draw (2,0) to [short, *-o, i<^=$I_B$] (2,-2);
+  \draw (0,0) to [short, *-*] (0,2);
+  \draw (2,0) to [short, *-*] (2,2);
+  \draw (4,0) to [short, *-*] (4,2);
+  \draw (4,2) to [current source, l_=$\alpha_F \cdot I_{ED}$, i=$$] (2,2);
+  \draw (0,2) to [current source, l=$\alpha_R \cdot I_{CD}$, i=$$] (2,2);
+  \node[left] at (-1,0) {E};
+  \node[right] at (5,0) {C};
+  \node[below] at (2,-2) {B};
+\end{circuitikz}
+\end{center}
+
+\begin{gather*}
+  I_E = I_{ES} \cdot \left( e^{\frac{U_{BE}}{U_T}} -1 \right)\\
+  I_C = \alpha_F \cdot I_E\\
+  I_B = (1 - \alpha_F) \cdot I_E
+\end{gather*}
+
+
+
+\subsection{4-Quadranten-Kennlinienfeld}
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_2/2_1_4Q}
+\end{center}
+
+Quadrant I stellt die Abhängigkeit des Kollektorstroms $I_{\textrm{C}}$ von der
+Kollektor-Emitter-Spannung $U_{\textrm{CE}}$ dar. Da diese zusätzlich stark vom
+Basistrom $I_{\textrm{B}}$ abhängig ist, kann keine einzelne Kennlinie
+angegeben werden und es ergibt sich ein Kennlinienfeld, von dem ausgewählte
+Kennlinien dargestellt werden.\\
+
+Die \emph{Stromsteuerkennlinie} in Quadrant II zeigt den Zusammenhang
+zwischen Eingangsstrom (Basis) und Ausgangsstrom (Kollektor). Das
+Verhalten ist hier annäherungsweise linear; der statische Verstärkungsfaktor,
+auch Gleichstromverstärkungsfaktor, kann daher als
+$$B = \frac{I_C}{I_B}$$
+ausgedrückt werden, welcher demnach nur für \textit{einen} statisch
+eingestellten Arbeitspunkt gilt. \\ 
+
+Im Quadranten III, auch \emph{Eingangskennlinienfeld}, kann durch Verfolgen der Eingangsgrößen Basis-Spannung und -Strom das
+Diodenverhalten des Basis-Emitter-pn-Übergangs erkannt werden.\\
+
+Quadrant IV stellt die Rückwirkung der Kollektor-Emitter-Spannung auf
+die Basis-Emitter-Spannung dar, meist beschränkt man sich jedoch auf
+auf die Quadranten I, II und III.
+
+
+% 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\includepdf{./titlepage/titlepage2.pdf}
+  \clearpage
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{section}{0}
+\section{Versuchsaufgaben}
+
+\subsection{}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$I_C / \si{\milli\ampere}$ & $B$                & $U_{CE} / \si{\volt}$ & $U_{BE} / \si{\volt}$ & $R_{CE} / \si{\ohm}$           \\ \midrule
+2.863 & 286.3              & 0.3      & 0.661    & 104.79\\
+2.877 & 287.7              & 0.5      & 0.662    & 173.79\\
+2.905 & 290.5 & 0.8      & 0.661    & 275.39\\
+2.927 & 292.7 & 1        & 0.661    & 341.65\\
+3.008 & 300.8& 2        & 0.658    & 664.89\\
+3.18  & 318.0& 4        & 0.653    & 1257.86\\
+3.38  & 338.0                & 6        & 0.646    & 1775.15\\
+3.49  & 349.0& 8        & 0.643    & 2292.26\\
+3.66  & 366.0& 10       & 0.637    & 2732.24\\
+3.85  & 385.0& 12       & 0.631    & 3116.88\\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte für $I_B = 10 \si{\micro\ampere}$}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$I_C / \si{\milli\ampere}$ & $B$                & $U_{CE} / \si{\volt}$ & $U_{BE} / \si{\volt}$ & $R_{CE} / \si{\ohm}$           \\ \midrule
+5.35 & 267.5              & 0.3 & 0.663 & 56.07\\
+5.68 & 284.0& 0.5 & 0.669 & 88.03\\
+5.75 & 287.5              & 0.8 & 0.673 & 139.13\\
+5.79 & 289.5              & 1   & 0.675 & 172.71\\
+5.95 & 297.5& 2   & 0.674 & 336.13\\
+6.7  & 335.0& 4   & 0.658 & 597.01\\
+6.91 & 345.5& 6   & 0.654 & 868.30\\
+7.32 & 366.0& 8   & 0.643 & 1092.90\\
+7.83 & 391.5& 10  & 0.633 & 1277.14\\
+8.24 & 412.0& 12  & 0.624 & 1456.31\\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte für $I_B = 20 \si{\micro\ampere}$}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$I_C / \si{\milli\ampere}$ & $B$                & $U_{CE} / \si{\volt}$ & $U_{BE} / \si{\volt}$ & $R_{CE} / \si{\ohm}$           \\ \midrule
+7.66  & 255.33& 0.3 & 0.676 & 39.165\\
+8.6   & 286.67& 0.5 & 0.682 & 58.14\\
+8.94  & 298                & 0.8 & 0.685 & 89.49\\
+8.96  & 298.67& 1   & 0.686 & 111.61\\
+9.26  & 308.67& 2   & 0.682 & 215.98\\
+9.84  & 328                & 4   & 0.674 & 406.50\\
+10.65 & 355                & 6   & 0.657 & 563.38\\
+11.67 & 389                & 8   & 0.642 & 685.52\\
+12.87 & 429                & 10  & 0.617 & 777.00\\
+14.5  & 483.33& 12  & 0.584 & 827.59\\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte für $I_B = 30 \si{\micro\ampere}$}
+\end{table}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{2_1/2_1_Ausgangskennlinie}
+  \end{center}
+  \caption{Ausgangskennlinien nach den Messungen aus Aufgabe 1}
+\end{figure}
+
+Der dynamische Widerstand $r_\textrm{CE}$ bei den jeweiligen Basisströmen wurde durch
+angenommenes lineares Verhalten ab einer Kollektor-Emitter-Spannung von $1
+\si{\volt}$ mit dem letzten Wertepaar der Messreihe berechnet:
+
+$$r_\textrm{CE} = \frac{U_\textrm{CE} - 1 \si{\volt}}{ I_\textrm{CL} -
+  I_\textrm{C}(1 \si{\volt})} $$
+
+\begin{gather*}
+  r_\textrm{CE10} = 11918 \,\ \si{\ohm}\\
+  r_\textrm{CE20} = 4489.8 \,\ \si{\ohm}\\
+  r_\textrm{CE30} = 1985.6\,\ \si{\ohm}\\
+\end{gather*}
+Die sichtbar abweichende Linearität der Kennlinie bei $I_\textrm{B} = 30
+\si{\micro\ampere}$ ist auf die steigende Temperatur des Transistors bei höheren
+Kollektorströmen zurückzuführen.
+
+% 4
+\subsection{}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$I_B / \si{\micro\ampere}$  & $I_C / \si{\milli\ampere}$    & $U_{BE} / \si{\volt}$  \\ \midrule 
+0.5 & 0.142 & 0.583    \\
+1   & 0.292 & 0.6      \\
+2   & 0.558 & 0.612    \\
+4   & 1.195 & 0.63     \\
+6   & 1.882 & 0.638    \\
+8   & 2.575 & 0.644    \\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{ Messwerte der Aufgabe 2, $U_{CE} = \textrm{konst} = 6 \si{\volt}$}
+\end{table}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{2_2/2_2_Eingangskennlinie}
+  \end{center}
+  \caption{Eingangskennlinie nach den Messungen aus Aufgabe 2}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{2_2/2_2_Stromübertragung}
+  \end{center}
+  \caption{Stromübertragungskennlinie nach den Messungen aus Aufgabe 2}
+\end{figure}
+
+
+\end{document}

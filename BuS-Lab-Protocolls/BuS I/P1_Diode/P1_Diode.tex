@@ -1,0 +1,439 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{../preamble}
+
+\setlength\columnsep{0.145898\paperwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \includepdf{./titlepage/titlepage.pdf}
+  \clearpage
+  \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vorbereitungsaufgaben}
+
+% 1.2
+\subsection{Aufbau und Wirkungsweise eines pn-Übergangs}
+\begin{center}
+  \includegraphics[width=\textwidth]{1_1/pn}
+\end{center}
+
+\noindent Dotiert man einen Halbleiterkristall (z.B. \ce{Si} oder \ce{Ge}) mit
+Fremdatomen, wird die elektrische Leitfähigkeit des Halbleiters beeinflusst.
+
+\begin{itemize}
+\item{
+    Bei Dotierung mit
+    5-(oder höher-)wertigen Atomen (z.B. \ce{P} oder \ce{As}) geraten zusätzliche
+    Elektronen in das Leitungsband des Halbleiterkristalls; es wird \emph{n-Leitung}
+    provoziert
+  }
+
+\item{
+    Bei Dotierung mit
+    3-(oder geringer-)wertigen Atomen (z.B. \ce{B} oder \ce{Ga}) entstehen
+    Elektronenfehlstellen im Valenzband des Halbleiterkristalls; es wird \emph{p-Leitung}
+    provoziert.
+  }
+\end{itemize}
+
+Die Elektronenkonzentration im n-Leiter ist somit höher als die im p-Leiter.
+Bringt man unterschiedlich dotierte Halbleiter in Kontakt, kommt es durch
+Diffusion zum Übergang von (höher-energetischen) Elektronen im Leitungsband des
+n-Leiters in das (nieder-energetische) Valenzband des p-Leiters. Im p-Leiter
+werden dann die Elektronenfehlstellen gefüllt und es entstehen negative Ionen;
+Im n-Leiter werden durch die Elektronenwanderung Fehlstellen
+von den Elektronen zurückgelassen, wodurch sich dort positive Ionen bilden. Die
+Diffusion findet so lange statt, bis die Ladung bzw. das elektrische Feld der gebildeten Ionen einem weiteren
+Elektronenübergang vollständig entgegenwirkt. Die verbleibende Übergangszone,
+die den Ladungstransfer verhindert
+wird folglich \emph{Raumladungszone} genannt. 
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_1/pn2}
+\end{center}
+
+% 1.1
+\subsection{Aufbau und Wirkungsweise einer Diode}
+
+\begin{center}
+\begin{circuitikz}
+  \draw (0,0) to[Do] (2,0);
+\end{circuitikz}
+\end{center}
+
+\noindent Die elektrischen Eigenschaften des pn-Übergangs können technisch ausgenutzt werden, um eine \emph{Diode} zu realisieren. Der Stromfluss durch den pn-Übergang ist von der Polarität der über ihn angelegten Spannung abhängig. Man definiert daher die Orientierung der Diode in \emph{Sperr-} und \emph{Durchlassrichtung}.
+
+Will man einen Strom durch die Diode treiben, so müssen die Elektronen des
+n-Gebiets bzw. die Fehlstellen des p-Gebiets die Raumladungszone überqueren können.
+Legt man eine negative Spannung über den pn-Übergang/die Diode, das heißt positives Potential an den n- und
+negatives an den p-Leiter, wirkt die Influenz des äußeren elektrischen Feldes
+so, dass sich die Majoritätsladungsträger des jeweiligen Gebiets (Elektronen im n-
+und 'Fehlstellen' im p-Gebiet) von der Raumladungszone entfernen und diese somit
+vergrößern\footnote[1]{Fehlstellen bewegen sich nicht tatsächlich, sondern nur modellhaft.
+Sie stellen die positiv geladenen, \emph{ortsfesten} Atomrümpfe dar, die u.a. durch die
+Elektronenbewegung hinterlassen werden.}. Die Diode nimmt einen statischen Zustand (bezüglich der
+Majoritätsladungsträger) ein und wirkt somit elektrisch isolierend/sperrend. Reale Dioden besitzen allerdings eine
+maximale Sperrspannung, ab welcher sie durchbrechen und ihre
+Sperreigenschaft verlieren.
+
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_2/diode1}
+\end{center}
+
+Legt man eine (ausreichend) positive Spannung über die Diode, also positives Potential an den
+p- und negatives an den n-Leiter, bewegen sich die Majoritätsladungsträger des
+jeweiligen Bereichs in Richtung der Raumladungszone und verkleinern diese
+dadurch. In dieser Richtung wirkt die Diode elektrisch leitfähig.
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_2/diode2}
+\end{center}
+
+
+% 1.3
+\subsection{Z- und Schottky-Dioden}
+
+% Z-Dioden
+\begin{center}
+\begin{circuitikz}
+  \draw (0,0) to[Zener diode] (2,0);
+\end{circuitikz}
+\end{center}
+
+Die Z-Diode ist eine besondere Diodenbauform, die kontrolliert im Durchbruchbereich
+arbeiten kann. In Sperrrichtung betrieben arbeitet sie bis zu einer bestimmten
+\emph{Z-Spannung}, ab welcher sie durchbricht und ihre Leitfähigkeit
+exponentiell steigt. Im Durchlassbereich verhält sich die Z-Diode dagegen wie
+eine normale Diode.
+Z-Dioden eignen sich zur Realisierung von Spannungsstabilisierungsschaltungen (1.4).
+
+\holine{\textwidth}
+
+% Schottky-Dioden
+\begin{center}
+\begin{circuitikz}
+  \draw (0,0) to[Schottky diode] (2,0);
+\end{circuitikz}
+\end{center}
+
+Schottky-Dioden haben keinen üblichen Halbleiter-Halbleiter-, sondern einen Metall-Halbleiter-Übergang.
+Charakteristisch sind niedrige Durchlassspanunngen im Bereich von $150 - 450 \si{\milli\volt}$.
+
+
+
+% 1.4
+\subsection{Spannungsstabilisierungsschaltung}
+
+\begin{center}
+\begin{circuitikz}
+  \draw (0, 0) to[V=$U_e$] (0,-3);
+  \draw (0, 0) to[R=$R_V$] (4,0);
+  \draw (4,-3) to[Zener diode, *-*] (4,0);
+  \draw (4,0) to[short] (6,0);
+  \draw (6,0) to[R=$R_L$] (6,-3);
+  \draw (0,-3) to[short] (6,-3);
+\end{circuitikz}
+\end{center}
+
+Die Spannungsstabilisierungsschaltung dient dazu, eine konstante Ausgangsspannung über
+einer Last auch bei schwankender Eingangsspannung ($>=U_Z$) zu gewährleisten.
+Geht man davon aus, dass die Spannung über der Z-Diode nach erreichen der
+Z-Spannung mit steigendem Strom konstant bleibt, so hält die Diode auch durch
+ihre Parallelschaltung mit der Last die Spannung über diese konstant, indem sie
+den Laststrom konstant hält. Mit steigender Eingangsspannung/steigendem
+Eingangsstrom steigt daher der Strom durch die Z-Diode, während der Strom durch
+die Last unverändert bleibt.
+
+Bei Einsatz der Schaltung müssen Vor- und Lastwiderstand so dimensioniert werden, dass der minimale Strom,
+den die Z-Diode benötigt, um ihre Regulationsfunktion zu bieten, und der
+maximale Strom, der aufgrund von Wärmeentwicklung nicht überschritten werden
+darf, eingehalten werden.
+
+Über Messung der Ausgangsspannung und Bezug dieser auf die Eingangsspannung kann
+die Schaltung getestet werden.
+
+Die Spannungsstabilisierungsschaltung ist allerdings gerade bei hohen Strömen nicht besonders effizient,
+da jede in der Last unerwünschte Leistung in der Z-Diode bzw. dem Vorwiderstand
+in Wärme umgesetzt wird.
+
+% 1.5
+\subsection{Dimensionierung des Vorwiderstands}
+
+\begin{align*}
+  U_{e_{\textrm{min}}} &= 8.5 \,\ \si{\volt}\\
+  U_{e_{\textrm{max}}} &= 12.0 \,\ \si{\volt}\\
+  I_{L_{\textrm{min}}} &= 50 \,\ \si{\milli\ampere}\\
+  I_{L_{\textrm{max}}} &= 130 \,\ \si{\milli\ampere}\\
+  U_{Z} &= 5.6 \,\ \si{\volt}\\
+  I_{Z_{\textrm{min}}}/I_{Z_{\textrm{max}}} &= 20 \,\ \si{\milli\ampere} / 300 \,\ \si{\milli\ampere}\\
+\end{align*}
+
+\begin{gather*}
+  R_{V_{\textrm{max}}} = \frac{U_{e_{\textrm{min}}} -
+    U_Z}{I_{Z_{\textrm{min}}}+I_{L_{\textrm{max}}}}=\frac{8.5 \si{\volt} - 5.6
+    \si{\volt}}{20 \si{\milli\ampere} + 130 \si{\milli\ampere}} = 19.33 \,\ \si{\ohm}\\[\smallvert]
+  R_{V_{\textrm{min}}} = \frac{U_{e_{\textrm{max}}} -
+    U_Z}{I_{Z_{\textrm{max}}}+I_{L_{\textrm{min}}}} = \frac{12 \si{\volt} -
+    5.6\si{\volt}}{300 \si{\milli\ampere} + 50 \si{\milli\ampere}} = 18.29 \,\
+  \si{\ohm}
+\end{gather*}
+
+$\rightarrow$ z.B. ein $18.7 \,\ \si{\ohm}$ Widerstand aus der E48-Reihe.
+
+% 1.6
+\subsection{Diodenkennlinie}
+
+\begin{center}
+  \includegraphics[width=\textwidth]{1_6/diodenkennline}
+\end{center}
+
+$$ I(U) = I_s \cdot (e^{\frac{U}{m \cdot U_T} }-1)$$
+
+
+% 1.7
+\subsection{Diodengrenzwerte}
+
+Der Strom, der durch die Diode fließt und die Spannung, die über der Diode
+anliegt ergeben im Produkt die Leistung, die die Diode in (z.B.) Wärme umsetzt.
+Überschreitet die Leistung einen Grenzwert, kann es zur Überhitzung und u.U.
+Zerstörung der Diode kommen. Grafisch kann man dies durch den Schnittpunkt der
+Diodenkennlinie mit einer
+\emph{Verlustleistungshyperbel} darstellen, welche alle Wertepaare von Strom und
+Spannung abbildet, die die maximale Verlustleistung der Diode bilden.
+
+Wie in 1.2 bereits erwähnt, sperren Dioden nicht bis zu beliebigen Spannungen
+sondern brechen bei einer maximalen Sperrspannung durch, wodurch weiteres
+Sperren verhindert wird.
+
+
+% 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\includepdf{./titlepage/titlepage2.pdf}
+  \clearpage
+\setcounter{page}{1}
+
+\setcounter{section}{0}
+\section{Versuchsaufgaben}
+
+% 2.1
+
+\subsection{Diodenkennline BY500}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{@{}c|c@{}}
+\toprule
+$U / \si{\volt}$    & $I / \si{\milli\ampere}$     \\ \midrule
+0    & 0     \\
+0.5  & 2.9   \\
+0.6  & 15.8  \\
+0.65 & 34.3  \\
+0.67 & 46.6  \\
+0.69 & 63    \\
+0.7  & 72.2  \\
+0.71 & 84.3  \\
+0.72 & 100.7 \\
+0.73 & 118   \\
+0.8  & 336.4 \\
+0.84 & 650   \\
+0.87 & 1000  \\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte der Aufgabe 3.1, Diode in Durchlassrichtung}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}c|c@{}}
+\toprule
+$U / \si{\volt}$  & $I / \si{\micro\ampere}$    \\ \midrule
+-0  & -0    \\
+-5  & -0.06 \\
+-10 & -0.07 \\
+-15 & -0.08 \\
+-20 & -0.09 \\
+-25 & -0.1  \\
+-30 & -0.1  \\ \bottomrule
+\end{tabular}
+  \end{center}
+\caption{Messwerte der Aufgabe 3.1, Diode in Sperrrichtung}
+\end{table}
+
+\begin{center}
+ \includegraphics[width=\textwidth]{2_1/2_1_kennlinie}
+\end{center}
+
+\begin{center}
+ \includegraphics[width=\textwidth]{2_1/2_1_kennlinie_sperr}
+\end{center}
+
+% 2.2
+\pagebreak
+\subsection{Diodenkennline ZY5,6}
+
+\begin{multicols}{2}
+\begin{center}
+  \begin{table}[H]
+\begin{center}
+\begin{tabular}{@{}c|c@{}}
+\toprule
+$U / \si{\volt}$     & $I / \si{\milli\ampere}$     \\ \midrule
+0.5   & 0.13  \\
+0.6   & 0.819 \\
+0.65  & 3.06  \\
+0.7   & 14.23 \\
+0.71  & 16.5  \\
+0.72  & 22.22 \\
+0.73  & 32.5  \\
+0.74  & 44.43 \\
+0.75  & 63.6  \\
+0.76  & 134   \\
+0.77  & 166   \\
+0.775 & 194   \\
+0.777 & 237   \\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte der Aufgabe 3.2, Z-Diode in Durchlassrichtung}
+\end{table}
+\columnbreak
+
+  \begin{table}[H]
+\begin{center}
+\begin{tabular}{@{}c|c@{}}
+\toprule
+$U / \si{\volt}$     & $I / \si{\milli\ampere}$        \\ \midrule
+0     & 0        \\
+-0.5  & -0.0002  \\
+-1    & -0.00096 \\
+-1.5  & -0.0032  \\
+-2    & -0.008   \\
+-2.5  & -0.0178  \\
+-3    & -0.0352  \\
+-3.5  & -0.07    \\
+-4    & -0.124   \\
+-4.5  & -0.252   \\
+-5    & -0.61    \\
+-5.5  & -2.365   \\
+-5.66 & -20      \\
+-5.68 & -37      \\
+-5.75 & -66.7    \\
+-5.82 & -146     \\
+-5.85 & -202     \\
+-5.96 & -297     \\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte der Aufgabe 3.2, Z-Diode in Sperrrichtung}
+\end{table}
+
+\end{center}
+\end{multicols}
+
+
+
+\begin{center}
+ \includegraphics[width=\textwidth]{2_2/2_2_kennlinie}
+\end{center}
+
+Aus den Messwerten lassen sich die charakteristischen Eigenschaften einer
+Z-Diode gut erkennen.
+
+% 2.3
+\subsection{Z-Spannung und differentieller Widerstand}
+
+Zur Ermittlung des differentiellen Widerstands $r_z$ wurden die letzten beiden
+Wertepaare der Messreihe verwendet, da diese die Linearisierung (theoretisch) am besten
+abbilden.
+
+$$ r_z = \frac{\Delta U}{\Delta I} $$
+
+\begin{gather*}
+  U_2 = -5.96 \,\ \si{\volt}\\
+  I_2 = -297 \,\ \si{\milli\ampere}\\
+  U_1 = -5.85 \,\ \si{\volt}\\
+  I_1 = -202 \,\ \si{\milli\ampere}\\
+  r_z = \frac{U_2 - U_1}{I_2-I_1} = \frac{-5.96 - (-5.85)}{-0.297 - (-0.202)}
+  \frac{\si{\volt}}{\si{\ampere}} = 1.158 \,\ \si{\ohm}
+\end{gather*}
+
+Mit dem differentiellen Widerstand konnte dann die Z-Spannung $U_z$ über die Geradengleichung
+
+$$U(I) = I \cdot r_z + U_z$$
+
+\noindent bestimmt werden.
+
+\noindent Nach Einsetzen eines der Wertepaare erhält man:
+$$ U_z = U(I) - I\cdot r_z = -5.96 \si{\volt} - (-0.297 \si{\ampere} \cdot 1.158
+\si{\ohm}) = -5.616 \,\ \si{\volt} $$
+
+\noindent Dieser Wert passt zu der im Datenblatt der Diode angegebenen
+Z-Spannung von $U_{Z_{DB}} = 5.6 \,\ \si{\volt}$.
+\begin{center}
+ \includegraphics[width=\textwidth]{2_3/2_3_widerstand}
+\end{center}
+
+% 2.4
+\subsection{Spannungsstabilisierung bei veränderlicher Eingangsspannung}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{c|c}
+\toprule
+$U_e / \si{\volt} $ & $U_a / \si{\volt}$ \\\midrule
+8.5                                               & 0.772                                             \\
+9                                                 & 0.775                                             \\
+9.5                                               & 0.7768                                            \\
+10                                                & 0.7775                                            \\
+10.5                                              & 0.778                                             \\
+11                                                & 0.7786                                            \\
+11.5                                              & 0.7787                                            \\
+12                                                & 0.7788                 \\\bottomrule 
+\end{tabular}
+\end{center}
+\caption{Messwerte der Aufgabe 3.5}
+\end{table}
+
+$$ \Delta U_a = U_{a_{max}} - U_{a_{min}} = (0.7788 - 0.772) \si{\volt} =
+0.0068 \,\ \si{\volt}$$
+$$ \Delta U_e = U_{e_{max}} - U_{e_{min}} = (12 - 8.5) \si{\volt} = 3.5 \,\ \si{\volt}$$\\
+$$S = \frac{\Delta U_a}{\Delta U_e} = 0.001943 = 0.1943 \,\ \si{\percent}$$
+
+\begin{center}
+ \includegraphics[width=\textwidth]{2_4/2_4_kennlinie}
+\end{center}
+
+
+% 2.5
+\subsection{Spannungsstabilisierung bei veränderlichem Laststrom}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{@{}c|c|c@{}}
+\toprule
+$R_L / \si{\ohm}$   & $U_a / \si{\volt}$ & $I_L / \si{\ampere}$                   \\ \midrule
+40  & 5.79    & 0.145              \\
+60  & 5.82    & 0.097                \\
+80  & 5.84    & 0.073                \\
+100 & 5.86    & 0.059 \\
+120 & 5.87    & 0.049 \\ \bottomrule
+\end{tabular}
+\end{center}
+\caption{Messwerte der Aufgabe 3.6}
+\end{table}
+
+Im Versuch wurde der Lastwiderstand durch eine Widerstandsdekade eingestellt.
+Der Laststrom wurde dann durch
+$$ I_L = \frac{R_L}{U_a} $$
+\noindent berechnet.
+
+$$ \Delta U_a = U_{a_{max}} - U_{a_{min}} = (5.87 - 5.79) \si{\volt} = 0.08 \,\
+\si{\volt}$$
+
+\begin{center}
+ \includegraphics[width=\textwidth]{2_5/2_5}
+\end{center}
+
+\end{document}

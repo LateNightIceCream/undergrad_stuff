@@ -1,0 +1,29 @@
+\subsubsection{Bestimmung des Eingangswiderstands}
+Allgemein gelingt die Widerstandsmessung indirekt durch eine Spannungs- und
+Strommessung und anschließende Division der gemessenen Größen. 
+
+\subsubsection{Bestimmung des Ausgangswiderstands}
+Der Zusammenhang zwischen Lastwiderstand und Ausgangswiderstand des Verstärkers
+ist linear (Zweipol)
+\[R_a = \frac{U_{a,0} - U_{a,Last}}{I_{a,Last}}\]
+\[R_a = \frac{U_{a,0} - U_{a,Last}}{U_{a,Last}} \cdot R_L\]
+\[R_a = R_L \cdot \left(\frac{U_{a,0}}{U_{a,Last}}-1 \right)\]
+
+Wobei $U_{a,0}$ die Leerlaufspannung am Ausgang, $U_{a,Last}$ die
+Spannung am Ausgang bei Belastung mit dem Lastwiderstand $R_L$, und $R_a$ der
+Ausgangswiderstand des Verstärkers ist.
+
+Aus der Gleichung lässt sich erkennen, dass $R_a = R_L$ wenn $U_{a,Last} =
+U_{a,0}/2$ ist. D.h. die Ausgangsspannung $U_{a,Last}$ kann bei
+Belastung mit einem bekannten Lastwiderstandswert gemessen und anschließend in
+der obigen Gleichung verwendet werden oder sie kann auf den halben Wert der
+Leerlaufausgangsspannung durch einen variablen Lastwiderstand eingestellt
+werden, wonach eine Messung des Lastwiderstandes folgt.
+
+
+\subsubsection{Bestimmung der Verstärkungen}
+Da die Verstärkungen frequenzabhängig sind und somit das Verhältnis von Ein- und
+Ausgangsspannung (wechselspannungsmäßig) nicht konstant ist, muss man messtechnisch die
+Übertragungsfunktion ermitteln, was beispielsweise durch das Durchlaufen mehrerer
+Signalfrequenzen und anschließender Darstellung der
+Ausgangsamplituden/-differenz erreicht werden kann (wobbeln). 

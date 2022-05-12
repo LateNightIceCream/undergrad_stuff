@@ -1,0 +1,31 @@
+Die Spannung über dem Emitterwiderstand $U_{R_4}$ wird gewählt
+\[ U_{R_4} = 1 \, \si{\volt}\]
+
+\noindent Damit ergibt sich die Spannung $U'$ am Basisspannungsteiler zu
+\[ U' = 1 \, \si{\volt} + 0.7 \, \si{\volt} = 1.7 \, \si{\volt}\]
+
+Der Querstrom durch den Spannungsteiler wird so hoch gewählt, dass dieser
+bezüglich des Basisstroms als unbelastet angesehen werden kann. 
+\[I_{R_1} = 8 \cdot I_B\]
+
+\noindent Der Basisstrom
+\[I_B = \frac{I_C}{\beta} = \frac{4.5 \, \si{\milli\ampere}}{158} = 27.22 \, \si{\micro\ampere}\]
+
+\noindent führt zu den Widerstandswerten des Basisspannungsteilers
+\[R_2 = \frac{U'}{8 \cdot I_B} = \frac{1.7 \, \si{\volt}}{8 \cdot 27.22 \,
+    \si{\micro\ampere}} = 7.87 \, \si{\kilo\ohm}\]
+
+\[R_1 = \frac{U_s - U'}{9 \cdot I_B} = \frac{10.3 \, \si{\volt}}{244.98 \,
+    \si{\micro\ampere}} = 42.2 \, \si{\kilo\ohm}\]
+
+Die verbleibenden Widerstände sind
+\[ R_4 =  \frac{U_{R_4}}{I_{C,A}} = \frac{1 \, \si{\volt}}{4.3 \,
+    \si{\milli\ampere}} = 232 \, \si{\ohm}\]
+
+\[R_3 = \frac{U_s - U_{R_4} - U_{CE,A}}{I_{C,A}} = \frac{5 \, \si{\volt}}{4.3 \,
+  \si{\milli\ampere}} = 1.15 \, \si{\kilo\ohm}\]
+
+Die Widerstandswerte wurden so gerundet, dass sie jeweils in eine E-Reihe passen.
+
+Der Kondensator parallel zu $R_3$ kann so gewählt werden, dass seine Reaktanz $X_C$ bei der
+niedrigsten Signalfrequenz gleich $1/10\, R_3$ ist.

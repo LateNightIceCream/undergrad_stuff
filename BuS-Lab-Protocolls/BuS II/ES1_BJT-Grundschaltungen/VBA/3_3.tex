@@ -1,0 +1,133 @@
+Das Vierpolersatzschaltbild dient zur Kleinsignalbeschreibung des
+Bipolartransistors. Die Kapaziäten im physikalischen Ersatzschaltbild führen zu
+einer Frequenzabhängigkeit der Vierpolparameter.
+
+\begin{figure}[H]
+\begin{center}
+\begin{circuitikz}
+
+  \draw (-2,0) to[open, v=$u_1$] (-2,-4);
+  \draw (9,0) to[open, v=$u_2$] (9,-4);
+
+  \draw (-2,0) to [short, o-, i=$i_1$] (1,0)
+              to [R, l=$h_{11}$] (1,-2)
+              to [voltage source, l=$h_{12}\cdot u_2$, v_=$$, -*] (1,-4);
+
+  \draw (5, -4) to[current source, l=$h_{21} \cdot i_1$, i=$$, *-] (5,0);
+  \draw (6.618,0) to[R, l=$\dfrac{1}{h_{22}}$, *-*] (6.618, -4);
+
+
+   \draw (-2,-4) to [short, o-o] (9,-4);
+   \draw (5,0) to [short, -o] (9,0);
+\end{circuitikz}
+\caption{Hybridparametermodell}
+\end{center}
+\end{figure}
+\[h_{11} \vcentcolon= \frac{u_1}{i_1}\rvert_{u_2=0}\]
+\[h_{12} \vcentcolon= \frac{u_1}{u_2}\rvert_{i_1=0}\]
+\[h_{21} \vcentcolon= \frac{i_2}{i_1}\rvert_{u_2=0}\]
+\[h_{22} \vcentcolon= \frac{i_2}{u_2}\rvert_{i_1=0}\]
+
+
+\begin{figure}[H]
+
+\begin{center}
+\begin{circuitikz}
+
+  \draw (-3,0) to[open, v=$u_{BE}$] (-3,-4);
+  \draw (9,0) to[open, v=$u_{CE}$] (9,-4);
+
+  \draw (-3,0) to [short, o-, i=$i_1$] (1,0);
+  \draw (0, 0) to [R, l_=$r_\pi$, *-*] (0,-4);
+  \draw (1.382, 0) to [C, l=$C_{BE}$, *-*] (1.382,-4);
+
+  \draw (1,0) to[C, l=$C_{BC}$] (5,0);
+
+  \draw (5, -4) to[current source, l=$g_m u_{BE}$, i=$$, *-*] (5,0);
+  \draw (6.618,0) to[R, l=$r_0$, *-*] (6.618, -4);
+
+
+   \draw (-3,-4) to [short, o-o] (9,-4);
+   \draw (5,0) to [short, -o] (9,0);
+\end{circuitikz}
+\end{center}
+\caption{Kleinsignalersatzschaltbild des Bipolartransistors}
+\end{figure}
+
+\noindent Steilheit/Übertragungsleitwert:
+\[ g_m = \frac{\dif I_{C}}{\dif U_{BE}} = \frac{I_{C,A}}{U_T} \]
+Eingangswiderstand:
+\[ r_\pi = \frac{\dif U_{BE}}{\dif I_B} = \frac{\beta_N}{g_m}= \frac{\beta_N \cdot U_T}{I_{C,A}} \]
+Ausgangswiderstand ($U_{AN}:$ Early-Spannung):
+\[r_0 = \frac{\dif U_{CE}}{\dif I_C} = \frac{U_{AN} + U_{CE,A}}{I_{C,A}}\]
+
+\noindent Rückwärtssteilheit:
+\[ \frac{\dif I_B}{\dif U_{CE}} \approx 0\]
+
+\noindent $C_{BC}$: Sperrschichtkapazität (dominiert im normalen Verstärkerbetrieb)
+\noindent $C_{BE}$: Diffusionskapaziät \\
+
+\noindent Hybridparameter:
+
+\begin{gather*}
+  h_{11} \vcentcolon= \frac{u_1}{i_1}\rvert_{u_2=0}\\
+  h_{11} = \frac{r_\pi \cdot \frac{1}{j\omega(C_{BE} + C_{BC})}}{r_\pi + \cdot
+    \frac{1}{j\omega(C_{BE} + C_{BC})}} = \frac{r_\pi}{j\omega r_\pi
+    (C_{BE}+C_{BC}) + 1}
+\end{gather*}
+
+\eqbox{
+  h_{11} = r_\pi \cdot \frac{1}{1 + j\omega r_\pi(C_{BE} + C_{BC})}
+}{0.618\textwidth}
+
+\begin{gather*}
+  h_{12} \vcentcolon= \frac{u_1}{u_2}\rvert_{i_1=0}\\
+  i_1=0 \rightarrow i_B = 0 \rightarrow \beta_N \cdot i_B = 0 \rightarrow u_2 =
+  0\\
+\end{gather*}
+
+\eqbox{
+  h_{12} = 0
+}{0.618\textwidth}
+
+\begin{gather*}
+  h_{21} \vcentcolon= \frac{i_2}{i_1}\rvert_{u_2=0}\\
+  i_1 = \frac{u_{BE}}{r_\pi//(\frac{1}{j\omega(C_{BC}+C_{BE})})}\\
+  i_2 = i_c = g_m \cdot u_{BE} = \frac{\beta_N}{r_\pi}\cdot u_{BE}\\
+  \frac{1}{h_{21}} = \dfrac{\frac{u_{BE}}{\dfrac{r_\pi \cdot
+      \frac{1}{j\omega(C_{BC}+C_{BE})}}{r_\pi +
+      \frac{1}{j\omega(C_{BC}+C_{BE}}}} } { \dfrac{\beta_N}{r_\pi} \cdot u_{BE}}
+ = \dfrac{\frac{1}{\dfrac{
+      \frac{1}{j\omega(C_{BC}+C_{BE})}}{r_\pi +
+      \frac{1}{j\omega(C_{BC}+C_{BE}}}} } { \beta_N }
+ = \dfrac{\dfrac{
+     1}{\frac{1}{r_\pi \cdot j\omega(C_{BC}+C_{BE}) + 1}} } { \beta_N }\\
+ = \frac{1}{\beta_N \cdot \dfrac{1}{r_\pi \cdot j\omega(C_{BC}+C_{BE})+1}}\\
+\end{gather*}
+\vspace{-1cm}
+\eqbox{
+h_{21}=\beta_N \cdot \frac{1}{1 + j\omega r_\pi (C_{BC}+C_{BE})}}{0.618\textwidth}
+($\omega \rightarrow 0 \rightarrow h_{21} = \beta_N$ )
+
+\begin{gather*}
+  h_{22} \vcentcolon= \frac{i_2}{u_2}\rvert_{i_1=0}\\
+  \frac{1}{h_{22}}=r_0//\left(\frac{1}{j\omega C_{BC}} + (r_\pi //
+    \frac{1}{j\omega C_{BE}})\right)\\
+  = r_0 // \left( \frac{1}{j\omega C_{BC}} + \dfrac{1}{\frac{1}{r_\pi} + j\omega C_{BE}} \right)\\
+  = \frac{r_0 \cdot \left( \dfrac{1}{j\omega C_{BC}} + \dfrac{1}{\frac{1}{r_\pi}
+        + j\omega C_{BE}} \right)}{ r_0 + \left( \dfrac{1}{j\omega C_{BC}} +
+      \dfrac{1}{\frac{1}{r_\pi} + j\omega C_{BE}} \right)}
+\end{gather*}
+
+\eqbox{
+  \frac{1}{h_{22}} = \dfrac{r_0}{1 + \dfrac{r_0}{\left( \dfrac{1}{j\omega C_{BC}}
+        + \dfrac{1}{r_\pi + j\omega C_{BE}} \right)}}
+}{0.618\textwidth}
+
+\noindent y-Parameter:
+\begin{gather*}
+  y_{11}=\frac{1}{h_{11}}\\
+  y_{12}=\frac{-h_{12}}{h_{11}}\\
+  y_{21}=\frac{h_{21}}{h_{11}}\\
+  y_{22}=\frac{\textrm{det} H }{h_{11}}
+\end{gather*}

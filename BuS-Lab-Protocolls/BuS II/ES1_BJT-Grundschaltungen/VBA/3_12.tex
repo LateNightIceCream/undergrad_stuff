@@ -1,0 +1,17 @@
+Das Millertheorem besagt, dass sich eine zwischen Ein- und Ausgangskreis
+befindliche Impedanz durch zwei separate, jeweils im Ein- und Ausgangskreis
+befindliche, Impedanzen ersetzen lässt. Dies ist bei der Analyse des
+Kleinsignalersatzschaltbildes mit parasitären Kapazitäten (Abb. 2) hilfreich, da dort die
+Sperrschichtkapazität $C_{BC}$ den Ausgangskreis mit dem Eingangskreis koppelt.
+Sie lässt sich in zwei resultierende Miller-Kapazitäten transformieren.
+\[I_1 = \frac{U_1 - U_2}{Z} = \frac{U_1 - V_u \cdot U_1}{Z} = \frac{U_1
+    (1-V_u)}{Z} = \frac{U_1}{ \underbrace{\frac{Z}{1-V_u}}_{Z'} }\]
+\[Z' = \frac{Z}{1-V_u}\]
+\noindent analog gilt für die ausgangsseitige Impedanz
+\[Z'' = \frac{Z}{1- \frac{1}{V_u} }\]
+
+\noindent setzt man
+\[Z = \frac{1}{j \omega C_{BC}}\]
+\noindent für die Sperrschichtmillerkapazitäten, erhält man
+\[C_{BC}' = C_{BC}(1-V_u)\]
+\[C_{BC}'' = C_{BC}(1-\frac{1}{V_u})\]

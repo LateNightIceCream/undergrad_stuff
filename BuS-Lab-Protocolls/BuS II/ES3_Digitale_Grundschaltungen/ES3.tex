@@ -1,0 +1,54 @@
+\documentclass[a4paper, 11pt]{article}
+
+\input{../preamble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% for logic expressions
+\colorlet{highcolor}{black}
+\colorlet{lowcolor}{black}
+\newcommand{\HIGH}{
+  {\color{highcolor}{HIGH}}
+}
+\newcommand{\LOW}{
+  {\color{lowcolor}{LOW}}
+}
+
+
+\begin{document}
+
+% 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \includepdf{./titlepage/titlepage1.pdf}
+  \clearpage
+  \setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Schmitt-Trigger}
+\input{VBA/1_schmitt}
+
+\section{Monostabiler Multivibrator (Monoflop)}
+\input{VBA/2_monoflop_a}
+
+\section{Funktionsweise des Monoflops}
+\input{VBA/3_monoflop_b}
+
+\section{Aufbau astabiler Multivibratoren}
+\input{VBA/4_astabil}
+
+\section{Mono- und astabile Multivibratoren mit dem NE555}
+
+\section{TTL-Definitionen}
+
+\section{Statischer und dynamischer Störabstand}
+
+\section{Lastfaktor bei Gatter-Zusammenschaltung}
+
+\section{Eingangskennlinie eines 7400-Gatters}
+
+\section{Open-Collector-Ausgang}
+
+\section{Schaltkreisfamilien und deren Eigenschaften}
+
+\section{Zusammenschaltung von Gattern unterschiedlicher Familie}
+
+\end{document}

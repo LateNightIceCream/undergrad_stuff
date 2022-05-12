@@ -1,0 +1,29 @@
+\subsubsection{Dimensionierung}
+Die untersuchte Summierschaltung arbeitete nach der Funktion
+\[U_a = -(2 U_1 + 4 U_2)\]
+Der Rückkoppelwiderstand war $R_3 = 20 \, \si{\kilo\ohm}$. Die Dimensionierung
+erfolge durch
+\[\frac{R_3}{R_1} = 2, \,\, \frac{R_3}{R_2} = 4\]
+und ergab
+\[R_1 = 10 \, \si{\kilo\ohm}, \,\, R_2 = 5 \, \si{\kilo\ohm}\]
+
+\subsubsection{Messung}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+  \begin{center}
+\begin{tabular}{@{}llll@{}}
+\rowcolor{gray1} 
+$U_1 / \si{\volt}$                                               & $0.5$     & $1$       & $1.5$     \\
+\rowcolor{gray1} 
+$U_2 / \si{\volt}$                                               & $0.5$     & $0.5$     & $1$       \\
+\cellcolor{gray1}$U_a, \textrm{gemessen} / \si{\volt}$    & $-3.0049$ & $-4.0004$ & $-6.9967$ \\
+  \cellcolor{gray1}$U_a, \textrm{theoretisch} / \si{\volt}$ & $-3$      & $-4$      & $-7$     
+\end{tabular}
+  \end{center}
+  \caption{Messwerte der Summierschaltung}
+\end{table}
+
+Die Messwerte wurden mit einem Digitalmultimeter aufgenommen und zeigen eine sehr präzise Arbeitsweise der Schaltung.
